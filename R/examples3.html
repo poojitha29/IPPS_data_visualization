@@ -1,0 +1,2849 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>274Poojitha</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+   <script src='d3.v3.min.js' type='text/javascript'></script>
+    <script src='topojson.v1.min.js' type='text/javascript'></script>
+    <script src='datamaps.all.min.js' type='text/javascript'></script>
+	<style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 600px;
+      height: 450px;
+    }  
+    </style>
+
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+         <h1><a href="index.html">Inpatient Charge Data<span class="logo_colour"><b>Visualization</b></span></a></h1>
+          <h2>Visualization using <span style="color: #9ACD32;"><b><i>R </i></b></span></h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li><a href="index.html">Home</a></li>
+         <li ><a href="examples.html">V</a></li>
+          <li ><a href="examples1.html">V1</a></li>
+          <li ><a href="examples2.html">V2</a></li>
+		  <li class="selected"><a href="examples3.html">V3</a></li>
+		  <li><a href="examples4.html">V4</a></li>
+		  <li><a href="examples5.html">V5</a></li>
+		  
+          <li><a href="contact.html">References</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header" ></div>
+    <div id="site_content1" align="middle">
+ 
+      <div id="content1" align="middle">
+        <!-- insert the page content here -->
+		<table ><th>Average Total Discharges</th><th> Average Covered Charges </th><tr ><td  style="background:#F6F4F0;padding-top:25px;" valign="top" width="700px" align="left">
+		<div id = 'chart2db4628984a' class = 'rChart datamaps'></div>    
+    <script id='popup-template' type='text/x-handlebars-template'>
+    
+</script>
+<script>
+  var chartParams = {
+ "dom": "chart2db4628984a",
+"width":    600,
+"height":    400,
+"scope": "usa",
+"fills": {
+ "(26.5,31.3]": "#8DD3C7",
+"(31.3,35.5]": "#FFFFB3",
+"(35.5,37.4]": "#BEBADA",
+"(37.4,38.6]": "#FB8072",
+"(38.6,40.5]": "#80B1D3",
+"(40.5,42.5]": "#FDB462",
+"(42.5,45.3]": "#B3DE69",
+"(45.3,49.1]": "#FCCDE5",
+"(49.1,67.9]": "#D9D9D9" 
+},
+"legend": true,
+"labels": true,
+"geographyConfig": {
+ "popupTemplate": function(geo, data) {
+return '<div class=\"hoverinfo\">'+'State-'+'<strong>'+
+data.State+'</strong>'+
+'<br>'+'Average Total Discharges-' +'<strong>'+
+data.AverageTotalDischarges+'</strong>'+'<br>'+
+'Total Discharges' +'<strong>'+ data.TotalDischarges+
+'</strong></div>';} 
+},
+"data": {
+ "AK": {
+ "State": [ "AK" ],
+"TotalDischarges": [ 6142 ],
+"AverageCoveredCharges": [ 9208 ],
+"AverageTotalPayments": [ 1.1256e+05 ],
+"AverageMedicarePayments": [ 3253 ],
+"AverageTotalDischarges": [   26.6 ],
+"AverageAverageCoveredCharges": [ 39.861 ],
+"AverageAverageTotalPayments": [ 487.27 ],
+"AverageAverageMedicarePayments": [ 14.082 ],
+"fillKey": [ "(26.5,31.3]" ] 
+},
+"AL": {
+ "State": [ "AL" ],
+"TotalDischarges": [ 142704 ],
+"AverageCoveredCharges": [ 112022 ],
+"AverageTotalPayments": [ 1.8133e+06 ],
+"AverageMedicarePayments": [ 25722 ],
+"AverageTotalDischarges": [   39.3 ],
+"AverageAverageCoveredCharges": [ 30.818 ],
+"AverageAverageTotalPayments": [ 498.86 ],
+"AverageAverageMedicarePayments": [ 7.0762 ],
+"fillKey": [ "(38.6,40.5]" ] 
+},
+"AR": {
+ "State": [ "AR" ],
+"TotalDischarges": [ 86769 ],
+"AverageCoveredCharges": [ 53073 ],
+"AverageTotalPayments": [ 1.0297e+06 ],
+"AverageMedicarePayments": [ 15550 ],
+"AverageTotalDischarges": [     42 ],
+"AverageAverageCoveredCharges": [ 25.676 ],
+"AverageAverageTotalPayments": [ 498.18 ],
+"AverageAverageMedicarePayments": [  7.523 ],
+"fillKey": [ "(40.5,42.5]" ] 
+},
+"AZ": {
+ "State": [ "AZ" ],
+"TotalDischarges": [ 104604 ],
+"AverageCoveredCharges": [ 116014 ],
+"AverageTotalPayments": [ 1.4474e+06 ],
+"AverageMedicarePayments": [ 27509 ],
+"AverageTotalDischarges": [   36.7 ],
+"AverageAverageCoveredCharges": [ 40.692 ],
+"AverageAverageTotalPayments": [ 507.67 ],
+"AverageAverageMedicarePayments": [ 9.6489 ],
+"fillKey": [ "(35.5,37.4]" ] 
+},
+"CA": {
+ "State": [ "CA" ],
+"TotalDischarges": [ 474979 ],
+"AverageCoveredCharges": [ 875420 ],
+"AverageTotalPayments": [ 6.5126e+06 ],
+"AverageMedicarePayments": [ 158453 ],
+"AverageTotalDischarges": [   36.4 ],
+"AverageAverageCoveredCharges": [  67.01 ],
+"AverageAverageTotalPayments": [ 498.51 ],
+"AverageAverageMedicarePayments": [ 12.129 ],
+"fillKey": [ "(35.5,37.4]" ] 
+},
+"CO": {
+ "State": [ "CO" ],
+"TotalDischarges": [ 61320 ],
+"AverageCoveredCharges": [ 76719 ],
+"AverageTotalPayments": [ 9.5081e+05 ],
+"AverageMedicarePayments": [ 17027 ],
+"AverageTotalDischarges": [   32.4 ],
+"AverageAverageCoveredCharges": [ 40.592 ],
+"AverageAverageTotalPayments": [ 503.07 ],
+"AverageAverageMedicarePayments": [  9.009 ],
+"fillKey": [ "(31.3,35.5]" ] 
+},
+"CT": {
+ "State": [ "CT" ],
+"TotalDischarges": [ 96258 ],
+"AverageCoveredCharges": [ 61972 ],
+"AverageTotalPayments": [ 1.0093e+06 ],
+"AverageMedicarePayments": [ 21866 ],
+"AverageTotalDischarges": [   47.9 ],
+"AverageAverageCoveredCharges": [ 30.817 ],
+"AverageAverageTotalPayments": [  501.9 ],
+"AverageAverageMedicarePayments": [ 10.873 ],
+"fillKey": [ "(45.3,49.1]" ] 
+},
+"DC": {
+ "State": [ "DC" ],
+"TotalDischarges": [ 20307 ],
+"AverageCoveredCharges": [ 18307 ],
+"AverageTotalPayments": [ 2.269e+05 ],
+"AverageMedicarePayments": [ 5779 ],
+"AverageTotalDischarges": [     44 ],
+"AverageAverageCoveredCharges": [ 39.626 ],
+"AverageAverageTotalPayments": [ 491.12 ],
+"AverageAverageMedicarePayments": [ 12.509 ],
+"fillKey": [ "(42.5,45.3]" ] 
+},
+"DE": {
+ "State": [ "DE" ],
+"TotalDischarges": [ 26753 ],
+"AverageCoveredCharges": [ 10473 ],
+"AverageTotalPayments": [ 1.9325e+05 ],
+"AverageMedicarePayments": [ 3890 ],
+"AverageTotalDischarges": [   67.9 ],
+"AverageAverageCoveredCharges": [ 26.581 ],
+"AverageAverageTotalPayments": [ 490.48 ],
+"AverageAverageMedicarePayments": [ 9.8731 ],
+"fillKey": [ "(49.1,67.9]" ] 
+},
+"FL": {
+ "State": [ "FL" ],
+"TotalDischarges": [ 536859 ],
+"AverageCoveredCharges": [ 507716 ],
+"AverageTotalPayments": [ 5.5951e+06 ],
+"AverageMedicarePayments": [ 92809 ],
+"AverageTotalDischarges": [   48.1 ],
+"AverageAverageCoveredCharges": [ 45.515 ],
+"AverageAverageTotalPayments": [ 501.58 ],
+"AverageAverageMedicarePayments": [ 8.3199 ],
+"fillKey": [ "(45.3,49.1]" ] 
+},
+"GA": {
+ "State": [ "GA" ],
+"TotalDischarges": [ 191242 ],
+"AverageCoveredCharges": [ 152030 ],
+"AverageTotalPayments": [ 2.4596e+06 ],
+"AverageMedicarePayments": [ 41889 ],
+"AverageTotalDischarges": [   38.5 ],
+"AverageAverageCoveredCharges": [ 30.602 ],
+"AverageAverageTotalPayments": [ 495.08 ],
+"AverageAverageMedicarePayments": [ 8.4318 ],
+"fillKey": [ "(37.4,38.6]" ] 
+},
+"HI": {
+ "State": [ "HI" ],
+"TotalDischarges": [ 11712 ],
+"AverageCoveredCharges": [ 14006 ],
+"AverageTotalPayments": [ 2.1524e+05 ],
+"AverageMedicarePayments": [ 5431 ],
+"AverageTotalDischarges": [   26.5 ],
+"AverageAverageCoveredCharges": [ 31.688 ],
+"AverageAverageTotalPayments": [ 486.97 ],
+"AverageAverageMedicarePayments": [ 12.287 ],
+"fillKey": [ null ] 
+},
+"IA": {
+ "State": [ "IA" ],
+"TotalDischarges": [ 68784 ],
+"AverageCoveredCharges": [ 41045 ],
+"AverageTotalPayments": [ 8.636e+05 ],
+"AverageMedicarePayments": [ 13568 ],
+"AverageTotalDischarges": [   39.7 ],
+"AverageAverageCoveredCharges": [ 23.671 ],
+"AverageAverageTotalPayments": [ 498.04 ],
+"AverageAverageMedicarePayments": [ 7.8247 ],
+"fillKey": [ "(38.6,40.5]" ] 
+},
+"ID": {
+ "State": [ "ID" ],
+"TotalDischarges": [ 18295 ],
+"AverageCoveredCharges": [ 13808 ],
+"AverageTotalPayments": [ 2.7862e+05 ],
+"AverageMedicarePayments": [ 5154 ],
+"AverageTotalDischarges": [   33.2 ],
+"AverageAverageCoveredCharges": [  25.06 ],
+"AverageAverageTotalPayments": [ 505.66 ],
+"AverageAverageMedicarePayments": [ 9.3539 ],
+"fillKey": [ "(31.3,35.5]" ] 
+},
+"IL": {
+ "State": [ "IL" ],
+"TotalDischarges": [ 361603 ],
+"AverageCoveredCharges": [ 281283 ],
+"AverageTotalPayments": [ 3.9302e+06 ],
+"AverageMedicarePayments": [ 73452 ],
+"AverageTotalDischarges": [   45.7 ],
+"AverageAverageCoveredCharges": [ 35.565 ],
+"AverageAverageTotalPayments": [ 496.92 ],
+"AverageAverageMedicarePayments": [ 9.2871 ],
+"fillKey": [ "(45.3,49.1]" ] 
+},
+"IN": {
+ "State": [ "IN" ],
+"TotalDischarges": [ 182573 ],
+"AverageCoveredCharges": [ 117776 ],
+"AverageTotalPayments": [ 2.1205e+06 ],
+"AverageMedicarePayments": [ 35140 ],
+"AverageTotalDischarges": [   42.9 ],
+"AverageAverageCoveredCharges": [ 27.647 ],
+"AverageAverageTotalPayments": [ 497.76 ],
+"AverageAverageMedicarePayments": [ 8.2488 ],
+"fillKey": [ "(42.5,45.3]" ] 
+},
+"KS": {
+ "State": [ "KS" ],
+"TotalDischarges": [ 61800 ],
+"AverageCoveredCharges": [ 50906 ],
+"AverageTotalPayments": [ 8.2246e+05 ],
+"AverageMedicarePayments": [ 13038 ],
+"AverageTotalDischarges": [   37.7 ],
+"AverageAverageCoveredCharges": [ 31.078 ],
+"AverageAverageTotalPayments": [ 502.11 ],
+"AverageAverageMedicarePayments": [ 7.9597 ],
+"fillKey": [ "(37.4,38.6]" ] 
+},
+"KY": {
+ "State": [ "KY" ],
+"TotalDischarges": [ 152572 ],
+"AverageCoveredCharges": [ 77584 ],
+"AverageTotalPayments": [ 1.6034e+06 ],
+"AverageMedicarePayments": [ 25110 ],
+"AverageTotalDischarges": [   47.3 ],
+"AverageAverageCoveredCharges": [ 24.027 ],
+"AverageAverageTotalPayments": [ 496.55 ],
+"AverageAverageMedicarePayments": [ 7.7764 ],
+"fillKey": [ "(45.3,49.1]" ] 
+},
+"LA": {
+ "State": [ "LA" ],
+"TotalDischarges": [ 109876 ],
+"AverageCoveredCharges": [ 98636 ],
+"AverageTotalPayments": [ 1.5134e+06 ],
+"AverageMedicarePayments": [ 24675 ],
+"AverageTotalDischarges": [   36.3 ],
+"AverageAverageCoveredCharges": [ 32.585 ],
+"AverageAverageTotalPayments": [ 499.97 ],
+"AverageAverageMedicarePayments": [ 8.1516 ],
+"fillKey": [ "(35.5,37.4]" ] 
+},
+"MA": {
+ "State": [ "MA" ],
+"TotalDischarges": [ 193680 ],
+"AverageCoveredCharges": [ 76974 ],
+"AverageTotalPayments": [ 1.9177e+06 ],
+"AverageMedicarePayments": [ 37602 ],
+"AverageTotalDischarges": [   50.4 ],
+"AverageAverageCoveredCharges": [ 20.035 ],
+"AverageAverageTotalPayments": [ 499.13 ],
+"AverageAverageMedicarePayments": [ 9.7871 ],
+"fillKey": [ "(49.1,67.9]" ] 
+},
+"MD": {
+ "State": [ "MD" ],
+"TotalDischarges": [ 173011 ],
+"AverageCoveredCharges": [ 42861 ],
+"AverageTotalPayments": [ 1.6871e+06 ],
+"AverageMedicarePayments": [ 40309 ],
+"AverageTotalDischarges": [     52 ],
+"AverageAverageCoveredCharges": [ 12.871 ],
+"AverageAverageTotalPayments": [ 506.63 ],
+"AverageAverageMedicarePayments": [ 12.105 ],
+"fillKey": [ "(49.1,67.9]" ] 
+},
+"ME": {
+ "State": [ "ME" ],
+"TotalDischarges": [ 33114 ],
+"AverageCoveredCharges": [ 17667 ],
+"AverageTotalPayments": [ 4.4372e+05 ],
+"AverageMedicarePayments": [ 7270 ],
+"AverageTotalDischarges": [   37.3 ],
+"AverageAverageCoveredCharges": [ 19.895 ],
+"AverageAverageTotalPayments": [ 499.69 ],
+"AverageAverageMedicarePayments": [ 8.1869 ],
+"fillKey": [ "(35.5,37.4]" ] 
+},
+"MI": {
+ "State": [ "MI" ],
+"TotalDischarges": [ 295552 ],
+"AverageCoveredCharges": [ 128000 ],
+"AverageTotalPayments": [ 2.7293e+06 ],
+"AverageMedicarePayments": [ 50143 ],
+"AverageTotalDischarges": [   54.5 ],
+"AverageAverageCoveredCharges": [ 23.621 ],
+"AverageAverageTotalPayments": [ 503.65 ],
+"AverageAverageMedicarePayments": [ 9.2532 ],
+"fillKey": [ "(49.1,67.9]" ] 
+},
+"MN": {
+ "State": [ "MN" ],
+"TotalDischarges": [ 95666 ],
+"AverageCoveredCharges": [ 61697 ],
+"AverageTotalPayments": [ 1.1211e+06 ],
+"AverageMedicarePayments": [ 21294 ],
+"AverageTotalDischarges": [   42.5 ],
+"AverageAverageCoveredCharges": [ 27.397 ],
+"AverageAverageTotalPayments": [ 497.83 ],
+"AverageAverageMedicarePayments": [ 9.4556 ],
+"fillKey": [ "(40.5,42.5]" ] 
+},
+"MO": {
+ "State": [ "MO" ],
+"TotalDischarges": [ 178826 ],
+"AverageCoveredCharges": [ 124535 ],
+"AverageTotalPayments": [ 2.0434e+06 ],
+"AverageMedicarePayments": [ 33395 ],
+"AverageTotalDischarges": [   44.1 ],
+"AverageAverageCoveredCharges": [ 30.681 ],
+"AverageAverageTotalPayments": [ 503.42 ],
+"AverageAverageMedicarePayments": [ 8.2274 ],
+"fillKey": [ "(42.5,45.3]" ] 
+},
+"MS": {
+ "State": [ "MS" ],
+"TotalDischarges": [ 93223 ],
+"AverageCoveredCharges": [ 71811 ],
+"AverageTotalPayments": [ 1.1946e+06 ],
+"AverageMedicarePayments": [ 18652 ],
+"AverageTotalDischarges": [   38.7 ],
+"AverageAverageCoveredCharges": [ 29.797 ],
+"AverageAverageTotalPayments": [ 495.69 ],
+"AverageAverageMedicarePayments": [ 7.7394 ],
+"fillKey": [ "(38.6,40.5]" ] 
+},
+"MT": {
+ "State": [ "MT" ],
+"TotalDischarges": [ 15705 ],
+"AverageCoveredCharges": [ 11213 ],
+"AverageTotalPayments": [ 2.5803e+05 ],
+"AverageMedicarePayments": [ 4431 ],
+"AverageTotalDischarges": [     31 ],
+"AverageAverageCoveredCharges": [  22.16 ],
+"AverageAverageTotalPayments": [ 509.94 ],
+"AverageAverageMedicarePayments": [ 8.7569 ],
+"fillKey": [ "(26.5,31.3]" ] 
+},
+"NC": {
+ "State": [ "NC" ],
+"TotalDischarges": [ 257312 ],
+"AverageCoveredCharges": [ 124190 ],
+"AverageTotalPayments": [ 2.5455e+06 ],
+"AverageMedicarePayments": [ 43294 ],
+"AverageTotalDischarges": [     51 ],
+"AverageAverageCoveredCharges": [ 24.636 ],
+"AverageAverageTotalPayments": [ 504.97 ],
+"AverageAverageMedicarePayments": [ 8.5884 ],
+"fillKey": [ "(49.1,67.9]" ] 
+},
+"ND": {
+ "State": [ "ND" ],
+"TotalDischarges": [ 16425 ],
+"AverageCoveredCharges": [ 8913 ],
+"AverageTotalPayments": [ 2.1776e+05 ],
+"AverageMedicarePayments": [ 3939 ],
+"AverageTotalDischarges": [   38.9 ],
+"AverageAverageCoveredCharges": [ 21.121 ],
+"AverageAverageTotalPayments": [ 516.03 ],
+"AverageAverageMedicarePayments": [ 9.3341 ],
+"fillKey": [ "(38.6,40.5]" ] 
+},
+"NE": {
+ "State": [ "NE" ],
+"TotalDischarges": [ 39799 ],
+"AverageCoveredCharges": [ 33148 ],
+"AverageTotalPayments": [ 5.5609e+05 ],
+"AverageMedicarePayments": [ 9379 ],
+"AverageTotalDischarges": [   37.5 ],
+"AverageAverageCoveredCharges": [ 31.213 ],
+"AverageAverageTotalPayments": [ 523.62 ],
+"AverageAverageMedicarePayments": [ 8.8315 ],
+"fillKey": [ "(37.4,38.6]" ] 
+},
+"NH": {
+ "State": [ "NH" ],
+"TotalDischarges": [ 28419 ],
+"AverageCoveredCharges": [ 21859 ],
+"AverageTotalPayments": [ 4.1057e+05 ],
+"AverageMedicarePayments": [ 7260 ],
+"AverageTotalDischarges": [   34.5 ],
+"AverageAverageCoveredCharges": [  26.56 ],
+"AverageAverageTotalPayments": [ 498.87 ],
+"AverageAverageMedicarePayments": [ 8.8214 ],
+"fillKey": [ "(31.3,35.5]" ] 
+},
+"NJ": {
+ "State": [ "NJ" ],
+"TotalDischarges": [ 251207 ],
+"AverageCoveredCharges": [ 316696 ],
+"AverageTotalPayments": [ 2.4266e+06 ],
+"AverageMedicarePayments": [ 49116 ],
+"AverageTotalDischarges": [   52.1 ],
+"AverageAverageCoveredCharges": [ 65.623 ],
+"AverageAverageTotalPayments": [ 502.81 ],
+"AverageAverageMedicarePayments": [ 10.177 ],
+"fillKey": [ "(49.1,67.9]" ] 
+},
+"NM": {
+ "State": [ "NM" ],
+"TotalDischarges": [ 26925 ],
+"AverageCoveredCharges": [ 27054 ],
+"AverageTotalPayments": [ 4.6646e+05 ],
+"AverageMedicarePayments": [ 8360 ],
+"AverageTotalDischarges": [   29.4 ],
+"AverageAverageCoveredCharges": [ 29.503 ],
+"AverageAverageTotalPayments": [ 508.68 ],
+"AverageAverageMedicarePayments": [ 9.1167 ],
+"fillKey": [ "(26.5,31.3]" ] 
+},
+"NV": {
+ "State": [ "NV" ],
+"TotalDischarges": [ 42600 ],
+"AverageCoveredCharges": [ 72769 ],
+"AverageTotalPayments": [ 6.0963e+05 ],
+"AverageMedicarePayments": [ 11761 ],
+"AverageTotalDischarges": [   35.4 ],
+"AverageAverageCoveredCharges": [  60.54 ],
+"AverageAverageTotalPayments": [ 507.18 ],
+"AverageAverageMedicarePayments": [ 9.7845 ],
+"fillKey": [ "(31.3,35.5]" ] 
+},
+"NY": {
+ "State": [ "NY" ],
+"TotalDischarges": [ 435557 ],
+"AverageCoveredCharges": [ 283926 ],
+"AverageTotalPayments": [ 4.5907e+06 ],
+"AverageMedicarePayments": [ 103704 ],
+"AverageTotalDischarges": [   47.5 ],
+"AverageAverageCoveredCharges": [ 30.935 ],
+"AverageAverageTotalPayments": [ 600.19 ],
+"AverageAverageMedicarePayments": [ 11.299 ],
+"fillKey": [ "(45.3,49.1]" ] 
+},
+"OH": {
+ "State": [ "OH" ],
+"TotalDischarges": [ 293472 ],
+"AverageCoveredCharges": [ 195242 ],
+"AverageTotalPayments": [ 3.5077e+06 ],
+"AverageMedicarePayments": [ 58265 ],
+"AverageTotalDischarges": [   41.9 ],
+"AverageAverageCoveredCharges": [ 27.844 ],
+"AverageAverageTotalPayments": [ 600.24 ],
+"AverageAverageMedicarePayments": [ 8.3093 ],
+"fillKey": [ "(40.5,42.5]" ] 
+},
+"OK": {
+ "State": [ "OK" ],
+"TotalDischarges": [ 97292 ],
+"AverageCoveredCharges": [ 73317 ],
+"AverageTotalPayments": [ 1.2437e+06 ],
+"AverageMedicarePayments": [ 19791 ],
+"AverageTotalDischarges": [   38.6 ],
+"AverageAverageCoveredCharges": [ 29.094 ],
+"AverageAverageTotalPayments": [ 493.53 ],
+"AverageAverageMedicarePayments": [ 7.8536 ],
+"fillKey": [ "(37.4,38.6]" ] 
+},
+"OR": {
+ "State": [ "OR" ],
+"TotalDischarges": [ 39546 ],
+"AverageCoveredCharges": [ 34926 ],
+"AverageTotalPayments": [ 6.5376e+05 ],
+"AverageMedicarePayments": [ 12921 ],
+"AverageTotalDischarges": [   30.4 ],
+"AverageAverageCoveredCharges": [ 26.887 ],
+"AverageAverageTotalPayments": [ 503.28 ],
+"AverageAverageMedicarePayments": [ 9.9469 ],
+"fillKey": [ "(26.5,31.3]" ] 
+},
+"PA": {
+ "State": [ "PA" ],
+"TotalDischarges": [ 314936 ],
+"AverageCoveredCharges": [ 305358 ],
+"AverageTotalPayments": [ 3.9454e+06 ],
+"AverageMedicarePayments": [ 67139 ],
+"AverageTotalDischarges": [   40.4 ],
+"AverageAverageCoveredCharges": [ 39.128 ],
+"AverageAverageTotalPayments": [ 505.56 ],
+"AverageAverageMedicarePayments": [ 8.6032 ],
+"fillKey": [ "(38.6,40.5]" ] 
+},
+"RI": {
+ "State": [ "RI" ],
+"TotalDischarges": [ 22289 ],
+"AverageCoveredCharges": [ 17314 ],
+"AverageTotalPayments": [ 2.9231e+05 ],
+"AverageMedicarePayments": [ 5880 ],
+"AverageTotalDischarges": [   37.9 ],
+"AverageAverageCoveredCharges": [ 29.446 ],
+"AverageAverageTotalPayments": [ 497.12 ],
+"AverageAverageMedicarePayments": [     10 ],
+"fillKey": [ "(37.4,38.6]" ] 
+},
+"SC": {
+ "State": [ "SC" ],
+"TotalDischarges": [ 121393 ],
+"AverageCoveredCharges": [ 100693 ],
+"AverageTotalPayments": [ 1.4075e+06 ],
+"AverageMedicarePayments": [ 24573 ],
+"AverageTotalDischarges": [   42.6 ],
+"AverageAverageCoveredCharges": [ 35.368 ],
+"AverageAverageTotalPayments": [ 494.39 ],
+"AverageAverageMedicarePayments": [ 8.6312 ],
+"fillKey": [ "(42.5,45.3]" ] 
+},
+"SD": {
+ "State": [ "SD" ],
+"TotalDischarges": [ 20109 ],
+"AverageCoveredCharges": [ 14159 ],
+"AverageTotalPayments": [ 2.3146e+05 ],
+"AverageMedicarePayments": [ 4674 ],
+"AverageTotalDischarges": [   41.4 ],
+"AverageAverageCoveredCharges": [ 29.134 ],
+"AverageAverageTotalPayments": [ 476.25 ],
+"AverageAverageMedicarePayments": [ 9.6173 ],
+"fillKey": [ "(40.5,42.5]" ] 
+},
+"TN": {
+ "State": [ "TN" ],
+"TotalDischarges": [ 189065 ],
+"AverageCoveredCharges": [ 119941 ],
+"AverageTotalPayments": [ 2.0978e+06 ],
+"AverageMedicarePayments": [ 31901 ],
+"AverageTotalDischarges": [   45.4 ],
+"AverageAverageCoveredCharges": [ 28.777 ],
+"AverageAverageTotalPayments": [  503.3 ],
+"AverageAverageMedicarePayments": [ 7.6538 ],
+"fillKey": [ "(45.3,49.1]" ] 
+},
+"TX": {
+ "State": [ "TX" ],
+"TotalDischarges": [ 479939 ],
+"AverageCoveredCharges": [ 486165 ],
+"AverageTotalPayments": [ 5.956e+06 ],
+"AverageMedicarePayments": [ 103728 ],
+"AverageTotalDischarges": [   40.5 ],
+"AverageAverageCoveredCharges": [ 40.978 ],
+"AverageAverageTotalPayments": [ 502.02 ],
+"AverageAverageMedicarePayments": [ 8.7431 ],
+"fillKey": [ "(40.5,42.5]" ] 
+},
+"UT": {
+ "State": [ "UT" ],
+"TotalDischarges": [ 23052 ],
+"AverageCoveredCharges": [ 18011 ],
+"AverageTotalPayments": [ 3.5693e+05 ],
+"AverageMedicarePayments": [ 6784 ],
+"AverageTotalDischarges": [   31.5 ],
+"AverageAverageCoveredCharges": [ 24.605 ],
+"AverageAverageTotalPayments": [ 487.62 ],
+"AverageAverageMedicarePayments": [ 9.2678 ],
+"fillKey": [ "(31.3,35.5]" ] 
+},
+"VA": {
+ "State": [ "VA" ],
+"TotalDischarges": [ 193399 ],
+"AverageCoveredCharges": [ 124407 ],
+"AverageTotalPayments": [ 2.1827e+06 ],
+"AverageMedicarePayments": [ 36355 ],
+"AverageTotalDischarges": [   44.6 ],
+"AverageAverageCoveredCharges": [ 28.718 ],
+"AverageAverageTotalPayments": [ 503.86 ],
+"AverageAverageMedicarePayments": [ 8.3922 ],
+"fillKey": [ "(42.5,45.3]" ] 
+},
+"VT": {
+ "State": [ "VT" ],
+"TotalDischarges": [ 10071 ],
+"AverageCoveredCharges": [ 5287 ],
+"AverageTotalPayments": [ 1.3324e+05 ],
+"AverageMedicarePayments": [ 3035 ],
+"AverageTotalDischarges": [   37.3 ],
+"AverageAverageCoveredCharges": [ 19.581 ],
+"AverageAverageTotalPayments": [ 493.48 ],
+"AverageAverageMedicarePayments": [ 11.241 ],
+"fillKey": [ "(35.5,37.4]" ] 
+},
+"WA": {
+ "State": [ "WA" ],
+"TotalDischarges": [ 107011 ],
+"AverageCoveredCharges": [ 95044 ],
+"AverageTotalPayments": [ 1.3921e+06 ],
+"AverageMedicarePayments": [ 27897 ],
+"AverageTotalDischarges": [   38.5 ],
+"AverageAverageCoveredCharges": [ 34.213 ],
+"AverageAverageTotalPayments": [ 501.13 ],
+"AverageAverageMedicarePayments": [ 10.042 ],
+"fillKey": [ "(37.4,38.6]" ] 
+},
+"WI": {
+ "State": [ "WI" ],
+"TotalDischarges": [ 100068 ],
+"AverageCoveredCharges": [ 72685 ],
+"AverageTotalPayments": [ 1.4222e+06 ],
+"AverageMedicarePayments": [ 24849 ],
+"AverageTotalDischarges": [   35.3 ],
+"AverageAverageCoveredCharges": [ 25.647 ],
+"AverageAverageTotalPayments": [ 501.83 ],
+"AverageAverageMedicarePayments": [ 8.7682 ],
+"fillKey": [ "(31.3,35.5]" ] 
+},
+"WV": {
+ "State": [ "WV" ],
+"TotalDischarges": [ 64968 ],
+"AverageCoveredCharges": [ 29704 ],
+"AverageTotalPayments": [ 7.9131e+05 ],
+"AverageMedicarePayments": [ 11866 ],
+"AverageTotalDischarges": [   40.9 ],
+"AverageAverageCoveredCharges": [ 18.694 ],
+"AverageAverageTotalPayments": [ 497.99 ],
+"AverageAverageMedicarePayments": [ 7.4676 ],
+"fillKey": [ "(40.5,42.5]" ] 
+},
+"WY": {
+ "State": [ "WY" ],
+"TotalDischarges": [ 6535 ],
+"AverageCoveredCharges": [ 6965 ],
+"AverageTotalPayments": [ 1.2405e+05 ],
+"AverageMedicarePayments": [ 2688 ],
+"AverageTotalDischarges": [   26.5 ],
+"AverageAverageCoveredCharges": [ 28.198 ],
+"AverageAverageTotalPayments": [ 502.22 ],
+"AverageAverageMedicarePayments": [ 10.883 ],
+"fillKey": [ null ] 
+} 
+},
+"id": "chart2db4628984a" 
+}
+  chartParams.element = document.getElementById('chart2db4628984a')
+  
+  
+  var mapchart2db4628984a = new Datamap(chartParams);
+  
+  
+    
+  // draw a bubble map if specified
+  if (chartParams.bubbles) {
+    var bubbles = chartParams.bubbles
+    mapchart2db4628984a.bubbles(bubbles)
+  }
+  
+  if (chartParams.labels){
+    mapchart2db4628984a.labels()
+  }
+  
+  if (chartParams.legend){
+    mapchart2db4628984a.legend()
+  }
+  
+  setProjection = function( element, options ) {
+    var projection, path;
+ 
+      projection = d3.geo.albersUsa()
+        .scale(element.offsetWidth)
+        .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+ 
+    path = d3.geo.path()
+      .projection( projection );
+ 
+    return {path: path, projection: projection};
+  }
+</script>
+
+<style>
+.datamaps {
+  position: relative;
+}
+</style>
+    
+
+		</td><td style="background:#F6F4F0;padding-top:25px;padding-right:5px" valign="top" width="700px" align="left">   
+		  <div id = 'chart2db4cac1a89' class = 'rChart datamaps'></div>    
+    <script id='popup-template' type='text/x-handlebars-template'>
+    
+</script>
+<script>
+  var chartParams = {
+ "dom": "chart2db4cac1a89",
+"width":    600,
+"height":    400,
+"scope": "usa",
+"fills": {
+ "(5.29e+03,1.39e+04]": "#A6CEE3",
+"(1.39e+04,2.01e+04]": "#1F78B4",
+"(2.01e+04,4.24e+04]": "#B2DF8A",
+"(4.24e+04,7.27e+04]": "#33A02C",
+"(7.27e+04,9.59e+04]": "#FB9A99",
+"(9.59e+04,1.22e+05]": "#E31A1C",
+"(1.22e+05,2.6e+05]": "#FDBF6F",
+"(2.6e+05,8.75e+05]": "#FF7F00" 
+},
+"legend": true,
+"labels": true,
+"geographyConfig": {
+ "popupTemplate": function(geo, data) {
+                                       return '<div class=\"hoverinfo\">'+'State-'+'<strong>'+
+                                       data.State+'</strong>'+
+                                       '<br>'+'AverageCoveredCharges-' +'<strong>'+
+                                      data.AverageCoveredCharges+'</strong>'+'<br>'+
+                                      'AverageAverageCoveredCharges' +'<strong>'+ data.AverageAverageCoveredCharges+
+                                       '</strong></div>';} 
+},
+"data": {
+ "AK": {
+ "State": [ "AK" ],
+"TotalDischarges": [ 6142 ],
+"AverageCoveredCharges": [ 9208 ],
+"AverageTotalPayments": [ 1.1256e+05 ],
+"AverageMedicarePayments": [ 3253 ],
+"AverageTotalDischarges": [   26.6 ],
+"AverageAverageCoveredCharges": [ 39.861 ],
+"AverageAverageTotalPayments": [ 487.27 ],
+"AverageAverageMedicarePayments": [ 14.082 ],
+"fillKey": [ "(5.29e+03,1.39e+04]" ] 
+},
+"AL": {
+ "State": [ "AL" ],
+"TotalDischarges": [ 142704 ],
+"AverageCoveredCharges": [ 112022 ],
+"AverageTotalPayments": [ 1.8133e+06 ],
+"AverageMedicarePayments": [ 25722 ],
+"AverageTotalDischarges": [   39.3 ],
+"AverageAverageCoveredCharges": [ 30.818 ],
+"AverageAverageTotalPayments": [ 498.86 ],
+"AverageAverageMedicarePayments": [ 7.0762 ],
+"fillKey": [ "(9.59e+04,1.22e+05]" ] 
+},
+"AR": {
+ "State": [ "AR" ],
+"TotalDischarges": [ 86769 ],
+"AverageCoveredCharges": [ 53073 ],
+"AverageTotalPayments": [ 1.0297e+06 ],
+"AverageMedicarePayments": [ 15550 ],
+"AverageTotalDischarges": [     42 ],
+"AverageAverageCoveredCharges": [ 25.676 ],
+"AverageAverageTotalPayments": [ 498.18 ],
+"AverageAverageMedicarePayments": [  7.523 ],
+"fillKey": [ "(4.24e+04,7.27e+04]" ] 
+},
+"AZ": {
+ "State": [ "AZ" ],
+"TotalDischarges": [ 104604 ],
+"AverageCoveredCharges": [ 116014 ],
+"AverageTotalPayments": [ 1.4474e+06 ],
+"AverageMedicarePayments": [ 27509 ],
+"AverageTotalDischarges": [   36.7 ],
+"AverageAverageCoveredCharges": [ 40.692 ],
+"AverageAverageTotalPayments": [ 507.67 ],
+"AverageAverageMedicarePayments": [ 9.6489 ],
+"fillKey": [ "(9.59e+04,1.22e+05]" ] 
+},
+"CA": {
+ "State": [ "CA" ],
+"TotalDischarges": [ 474979 ],
+"AverageCoveredCharges": [ 875420 ],
+"AverageTotalPayments": [ 6.5126e+06 ],
+"AverageMedicarePayments": [ 158453 ],
+"AverageTotalDischarges": [   36.4 ],
+"AverageAverageCoveredCharges": [  67.01 ],
+"AverageAverageTotalPayments": [ 498.51 ],
+"AverageAverageMedicarePayments": [ 12.129 ],
+"fillKey": [ "(2.6e+05,8.75e+05]" ] 
+},
+"CO": {
+ "State": [ "CO" ],
+"TotalDischarges": [ 61320 ],
+"AverageCoveredCharges": [ 76719 ],
+"AverageTotalPayments": [ 9.5081e+05 ],
+"AverageMedicarePayments": [ 17027 ],
+"AverageTotalDischarges": [   32.4 ],
+"AverageAverageCoveredCharges": [ 40.592 ],
+"AverageAverageTotalPayments": [ 503.07 ],
+"AverageAverageMedicarePayments": [  9.009 ],
+"fillKey": [ "(7.27e+04,9.59e+04]" ] 
+},
+"CT": {
+ "State": [ "CT" ],
+"TotalDischarges": [ 96258 ],
+"AverageCoveredCharges": [ 61972 ],
+"AverageTotalPayments": [ 1.0093e+06 ],
+"AverageMedicarePayments": [ 21866 ],
+"AverageTotalDischarges": [   47.9 ],
+"AverageAverageCoveredCharges": [ 30.817 ],
+"AverageAverageTotalPayments": [  501.9 ],
+"AverageAverageMedicarePayments": [ 10.873 ],
+"fillKey": [ "(4.24e+04,7.27e+04]" ] 
+},
+"DC": {
+ "State": [ "DC" ],
+"TotalDischarges": [ 20307 ],
+"AverageCoveredCharges": [ 18307 ],
+"AverageTotalPayments": [ 2.269e+05 ],
+"AverageMedicarePayments": [ 5779 ],
+"AverageTotalDischarges": [     44 ],
+"AverageAverageCoveredCharges": [ 39.626 ],
+"AverageAverageTotalPayments": [ 491.12 ],
+"AverageAverageMedicarePayments": [ 12.509 ],
+"fillKey": [ "(1.39e+04,2.01e+04]" ] 
+},
+"DE": {
+ "State": [ "DE" ],
+"TotalDischarges": [ 26753 ],
+"AverageCoveredCharges": [ 10473 ],
+"AverageTotalPayments": [ 1.9325e+05 ],
+"AverageMedicarePayments": [ 3890 ],
+"AverageTotalDischarges": [   67.9 ],
+"AverageAverageCoveredCharges": [ 26.581 ],
+"AverageAverageTotalPayments": [ 490.48 ],
+"AverageAverageMedicarePayments": [ 9.8731 ],
+"fillKey": [ "(5.29e+03,1.39e+04]" ] 
+},
+"FL": {
+ "State": [ "FL" ],
+"TotalDischarges": [ 536859 ],
+"AverageCoveredCharges": [ 507716 ],
+"AverageTotalPayments": [ 5.5951e+06 ],
+"AverageMedicarePayments": [ 92809 ],
+"AverageTotalDischarges": [   48.1 ],
+"AverageAverageCoveredCharges": [ 45.515 ],
+"AverageAverageTotalPayments": [ 501.58 ],
+"AverageAverageMedicarePayments": [ 8.3199 ],
+"fillKey": [ "(2.6e+05,8.75e+05]" ] 
+},
+"GA": {
+ "State": [ "GA" ],
+"TotalDischarges": [ 191242 ],
+"AverageCoveredCharges": [ 152030 ],
+"AverageTotalPayments": [ 2.4596e+06 ],
+"AverageMedicarePayments": [ 41889 ],
+"AverageTotalDischarges": [   38.5 ],
+"AverageAverageCoveredCharges": [ 30.602 ],
+"AverageAverageTotalPayments": [ 495.08 ],
+"AverageAverageMedicarePayments": [ 8.4318 ],
+"fillKey": [ "(1.22e+05,2.6e+05]" ] 
+},
+"HI": {
+ "State": [ "HI" ],
+"TotalDischarges": [ 11712 ],
+"AverageCoveredCharges": [ 14006 ],
+"AverageTotalPayments": [ 2.1524e+05 ],
+"AverageMedicarePayments": [ 5431 ],
+"AverageTotalDischarges": [   26.5 ],
+"AverageAverageCoveredCharges": [ 31.688 ],
+"AverageAverageTotalPayments": [ 486.97 ],
+"AverageAverageMedicarePayments": [ 12.287 ],
+"fillKey": [ "(1.39e+04,2.01e+04]" ] 
+},
+"IA": {
+ "State": [ "IA" ],
+"TotalDischarges": [ 68784 ],
+"AverageCoveredCharges": [ 41045 ],
+"AverageTotalPayments": [ 8.636e+05 ],
+"AverageMedicarePayments": [ 13568 ],
+"AverageTotalDischarges": [   39.7 ],
+"AverageAverageCoveredCharges": [ 23.671 ],
+"AverageAverageTotalPayments": [ 498.04 ],
+"AverageAverageMedicarePayments": [ 7.8247 ],
+"fillKey": [ "(2.01e+04,4.24e+04]" ] 
+},
+"ID": {
+ "State": [ "ID" ],
+"TotalDischarges": [ 18295 ],
+"AverageCoveredCharges": [ 13808 ],
+"AverageTotalPayments": [ 2.7862e+05 ],
+"AverageMedicarePayments": [ 5154 ],
+"AverageTotalDischarges": [   33.2 ],
+"AverageAverageCoveredCharges": [  25.06 ],
+"AverageAverageTotalPayments": [ 505.66 ],
+"AverageAverageMedicarePayments": [ 9.3539 ],
+"fillKey": [ "(5.29e+03,1.39e+04]" ] 
+},
+"IL": {
+ "State": [ "IL" ],
+"TotalDischarges": [ 361603 ],
+"AverageCoveredCharges": [ 281283 ],
+"AverageTotalPayments": [ 3.9302e+06 ],
+"AverageMedicarePayments": [ 73452 ],
+"AverageTotalDischarges": [   45.7 ],
+"AverageAverageCoveredCharges": [ 35.565 ],
+"AverageAverageTotalPayments": [ 496.92 ],
+"AverageAverageMedicarePayments": [ 9.2871 ],
+"fillKey": [ "(2.6e+05,8.75e+05]" ] 
+},
+"IN": {
+ "State": [ "IN" ],
+"TotalDischarges": [ 182573 ],
+"AverageCoveredCharges": [ 117776 ],
+"AverageTotalPayments": [ 2.1205e+06 ],
+"AverageMedicarePayments": [ 35140 ],
+"AverageTotalDischarges": [   42.9 ],
+"AverageAverageCoveredCharges": [ 27.647 ],
+"AverageAverageTotalPayments": [ 497.76 ],
+"AverageAverageMedicarePayments": [ 8.2488 ],
+"fillKey": [ "(9.59e+04,1.22e+05]" ] 
+},
+"KS": {
+ "State": [ "KS" ],
+"TotalDischarges": [ 61800 ],
+"AverageCoveredCharges": [ 50906 ],
+"AverageTotalPayments": [ 8.2246e+05 ],
+"AverageMedicarePayments": [ 13038 ],
+"AverageTotalDischarges": [   37.7 ],
+"AverageAverageCoveredCharges": [ 31.078 ],
+"AverageAverageTotalPayments": [ 502.11 ],
+"AverageAverageMedicarePayments": [ 7.9597 ],
+"fillKey": [ "(4.24e+04,7.27e+04]" ] 
+},
+"KY": {
+ "State": [ "KY" ],
+"TotalDischarges": [ 152572 ],
+"AverageCoveredCharges": [ 77584 ],
+"AverageTotalPayments": [ 1.6034e+06 ],
+"AverageMedicarePayments": [ 25110 ],
+"AverageTotalDischarges": [   47.3 ],
+"AverageAverageCoveredCharges": [ 24.027 ],
+"AverageAverageTotalPayments": [ 496.55 ],
+"AverageAverageMedicarePayments": [ 7.7764 ],
+"fillKey": [ "(7.27e+04,9.59e+04]" ] 
+},
+"LA": {
+ "State": [ "LA" ],
+"TotalDischarges": [ 109876 ],
+"AverageCoveredCharges": [ 98636 ],
+"AverageTotalPayments": [ 1.5134e+06 ],
+"AverageMedicarePayments": [ 24675 ],
+"AverageTotalDischarges": [   36.3 ],
+"AverageAverageCoveredCharges": [ 32.585 ],
+"AverageAverageTotalPayments": [ 499.97 ],
+"AverageAverageMedicarePayments": [ 8.1516 ],
+"fillKey": [ "(9.59e+04,1.22e+05]" ] 
+},
+"MA": {
+ "State": [ "MA" ],
+"TotalDischarges": [ 193680 ],
+"AverageCoveredCharges": [ 76974 ],
+"AverageTotalPayments": [ 1.9177e+06 ],
+"AverageMedicarePayments": [ 37602 ],
+"AverageTotalDischarges": [   50.4 ],
+"AverageAverageCoveredCharges": [ 20.035 ],
+"AverageAverageTotalPayments": [ 499.13 ],
+"AverageAverageMedicarePayments": [ 9.7871 ],
+"fillKey": [ "(7.27e+04,9.59e+04]" ] 
+},
+"MD": {
+ "State": [ "MD" ],
+"TotalDischarges": [ 173011 ],
+"AverageCoveredCharges": [ 42861 ],
+"AverageTotalPayments": [ 1.6871e+06 ],
+"AverageMedicarePayments": [ 40309 ],
+"AverageTotalDischarges": [     52 ],
+"AverageAverageCoveredCharges": [ 12.871 ],
+"AverageAverageTotalPayments": [ 506.63 ],
+"AverageAverageMedicarePayments": [ 12.105 ],
+"fillKey": [ "(4.24e+04,7.27e+04]" ] 
+},
+"ME": {
+ "State": [ "ME" ],
+"TotalDischarges": [ 33114 ],
+"AverageCoveredCharges": [ 17667 ],
+"AverageTotalPayments": [ 4.4372e+05 ],
+"AverageMedicarePayments": [ 7270 ],
+"AverageTotalDischarges": [   37.3 ],
+"AverageAverageCoveredCharges": [ 19.895 ],
+"AverageAverageTotalPayments": [ 499.69 ],
+"AverageAverageMedicarePayments": [ 8.1869 ],
+"fillKey": [ "(1.39e+04,2.01e+04]" ] 
+},
+"MI": {
+ "State": [ "MI" ],
+"TotalDischarges": [ 295552 ],
+"AverageCoveredCharges": [ 128000 ],
+"AverageTotalPayments": [ 2.7293e+06 ],
+"AverageMedicarePayments": [ 50143 ],
+"AverageTotalDischarges": [   54.5 ],
+"AverageAverageCoveredCharges": [ 23.621 ],
+"AverageAverageTotalPayments": [ 503.65 ],
+"AverageAverageMedicarePayments": [ 9.2532 ],
+"fillKey": [ "(1.22e+05,2.6e+05]" ] 
+},
+"MN": {
+ "State": [ "MN" ],
+"TotalDischarges": [ 95666 ],
+"AverageCoveredCharges": [ 61697 ],
+"AverageTotalPayments": [ 1.1211e+06 ],
+"AverageMedicarePayments": [ 21294 ],
+"AverageTotalDischarges": [   42.5 ],
+"AverageAverageCoveredCharges": [ 27.397 ],
+"AverageAverageTotalPayments": [ 497.83 ],
+"AverageAverageMedicarePayments": [ 9.4556 ],
+"fillKey": [ "(4.24e+04,7.27e+04]" ] 
+},
+"MO": {
+ "State": [ "MO" ],
+"TotalDischarges": [ 178826 ],
+"AverageCoveredCharges": [ 124535 ],
+"AverageTotalPayments": [ 2.0434e+06 ],
+"AverageMedicarePayments": [ 33395 ],
+"AverageTotalDischarges": [   44.1 ],
+"AverageAverageCoveredCharges": [ 30.681 ],
+"AverageAverageTotalPayments": [ 503.42 ],
+"AverageAverageMedicarePayments": [ 8.2274 ],
+"fillKey": [ "(1.22e+05,2.6e+05]" ] 
+},
+"MS": {
+ "State": [ "MS" ],
+"TotalDischarges": [ 93223 ],
+"AverageCoveredCharges": [ 71811 ],
+"AverageTotalPayments": [ 1.1946e+06 ],
+"AverageMedicarePayments": [ 18652 ],
+"AverageTotalDischarges": [   38.7 ],
+"AverageAverageCoveredCharges": [ 29.797 ],
+"AverageAverageTotalPayments": [ 495.69 ],
+"AverageAverageMedicarePayments": [ 7.7394 ],
+"fillKey": [ "(4.24e+04,7.27e+04]" ] 
+},
+"MT": {
+ "State": [ "MT" ],
+"TotalDischarges": [ 15705 ],
+"AverageCoveredCharges": [ 11213 ],
+"AverageTotalPayments": [ 2.5803e+05 ],
+"AverageMedicarePayments": [ 4431 ],
+"AverageTotalDischarges": [     31 ],
+"AverageAverageCoveredCharges": [  22.16 ],
+"AverageAverageTotalPayments": [ 509.94 ],
+"AverageAverageMedicarePayments": [ 8.7569 ],
+"fillKey": [ "(5.29e+03,1.39e+04]" ] 
+},
+"NC": {
+ "State": [ "NC" ],
+"TotalDischarges": [ 257312 ],
+"AverageCoveredCharges": [ 124190 ],
+"AverageTotalPayments": [ 2.5455e+06 ],
+"AverageMedicarePayments": [ 43294 ],
+"AverageTotalDischarges": [     51 ],
+"AverageAverageCoveredCharges": [ 24.636 ],
+"AverageAverageTotalPayments": [ 504.97 ],
+"AverageAverageMedicarePayments": [ 8.5884 ],
+"fillKey": [ "(1.22e+05,2.6e+05]" ] 
+},
+"ND": {
+ "State": [ "ND" ],
+"TotalDischarges": [ 16425 ],
+"AverageCoveredCharges": [ 8913 ],
+"AverageTotalPayments": [ 2.1776e+05 ],
+"AverageMedicarePayments": [ 3939 ],
+"AverageTotalDischarges": [   38.9 ],
+"AverageAverageCoveredCharges": [ 21.121 ],
+"AverageAverageTotalPayments": [ 516.03 ],
+"AverageAverageMedicarePayments": [ 9.3341 ],
+"fillKey": [ "(5.29e+03,1.39e+04]" ] 
+},
+"NE": {
+ "State": [ "NE" ],
+"TotalDischarges": [ 39799 ],
+"AverageCoveredCharges": [ 33148 ],
+"AverageTotalPayments": [ 5.5609e+05 ],
+"AverageMedicarePayments": [ 9379 ],
+"AverageTotalDischarges": [   37.5 ],
+"AverageAverageCoveredCharges": [ 31.213 ],
+"AverageAverageTotalPayments": [ 523.62 ],
+"AverageAverageMedicarePayments": [ 8.8315 ],
+"fillKey": [ "(2.01e+04,4.24e+04]" ] 
+},
+"NH": {
+ "State": [ "NH" ],
+"TotalDischarges": [ 28419 ],
+"AverageCoveredCharges": [ 21859 ],
+"AverageTotalPayments": [ 4.1057e+05 ],
+"AverageMedicarePayments": [ 7260 ],
+"AverageTotalDischarges": [   34.5 ],
+"AverageAverageCoveredCharges": [  26.56 ],
+"AverageAverageTotalPayments": [ 498.87 ],
+"AverageAverageMedicarePayments": [ 8.8214 ],
+"fillKey": [ "(2.01e+04,4.24e+04]" ] 
+},
+"NJ": {
+ "State": [ "NJ" ],
+"TotalDischarges": [ 251207 ],
+"AverageCoveredCharges": [ 316696 ],
+"AverageTotalPayments": [ 2.4266e+06 ],
+"AverageMedicarePayments": [ 49116 ],
+"AverageTotalDischarges": [   52.1 ],
+"AverageAverageCoveredCharges": [ 65.623 ],
+"AverageAverageTotalPayments": [ 502.81 ],
+"AverageAverageMedicarePayments": [ 10.177 ],
+"fillKey": [ "(2.6e+05,8.75e+05]" ] 
+},
+"NM": {
+ "State": [ "NM" ],
+"TotalDischarges": [ 26925 ],
+"AverageCoveredCharges": [ 27054 ],
+"AverageTotalPayments": [ 4.6646e+05 ],
+"AverageMedicarePayments": [ 8360 ],
+"AverageTotalDischarges": [   29.4 ],
+"AverageAverageCoveredCharges": [ 29.503 ],
+"AverageAverageTotalPayments": [ 508.68 ],
+"AverageAverageMedicarePayments": [ 9.1167 ],
+"fillKey": [ "(2.01e+04,4.24e+04]" ] 
+},
+"NV": {
+ "State": [ "NV" ],
+"TotalDischarges": [ 42600 ],
+"AverageCoveredCharges": [ 72769 ],
+"AverageTotalPayments": [ 6.0963e+05 ],
+"AverageMedicarePayments": [ 11761 ],
+"AverageTotalDischarges": [   35.4 ],
+"AverageAverageCoveredCharges": [  60.54 ],
+"AverageAverageTotalPayments": [ 507.18 ],
+"AverageAverageMedicarePayments": [ 9.7845 ],
+"fillKey": [ "(7.27e+04,9.59e+04]" ] 
+},
+"NY": {
+ "State": [ "NY" ],
+"TotalDischarges": [ 435557 ],
+"AverageCoveredCharges": [ 283926 ],
+"AverageTotalPayments": [ 4.5907e+06 ],
+"AverageMedicarePayments": [ 103704 ],
+"AverageTotalDischarges": [   47.5 ],
+"AverageAverageCoveredCharges": [ 30.935 ],
+"AverageAverageTotalPayments": [ 600.19 ],
+"AverageAverageMedicarePayments": [ 11.299 ],
+"fillKey": [ "(2.6e+05,8.75e+05]" ] 
+},
+"OH": {
+ "State": [ "OH" ],
+"TotalDischarges": [ 293472 ],
+"AverageCoveredCharges": [ 195242 ],
+"AverageTotalPayments": [ 3.5077e+06 ],
+"AverageMedicarePayments": [ 58265 ],
+"AverageTotalDischarges": [   41.9 ],
+"AverageAverageCoveredCharges": [ 27.844 ],
+"AverageAverageTotalPayments": [ 600.24 ],
+"AverageAverageMedicarePayments": [ 8.3093 ],
+"fillKey": [ "(1.22e+05,2.6e+05]" ] 
+},
+"OK": {
+ "State": [ "OK" ],
+"TotalDischarges": [ 97292 ],
+"AverageCoveredCharges": [ 73317 ],
+"AverageTotalPayments": [ 1.2437e+06 ],
+"AverageMedicarePayments": [ 19791 ],
+"AverageTotalDischarges": [   38.6 ],
+"AverageAverageCoveredCharges": [ 29.094 ],
+"AverageAverageTotalPayments": [ 493.53 ],
+"AverageAverageMedicarePayments": [ 7.8536 ],
+"fillKey": [ "(7.27e+04,9.59e+04]" ] 
+},
+"OR": {
+ "State": [ "OR" ],
+"TotalDischarges": [ 39546 ],
+"AverageCoveredCharges": [ 34926 ],
+"AverageTotalPayments": [ 6.5376e+05 ],
+"AverageMedicarePayments": [ 12921 ],
+"AverageTotalDischarges": [   30.4 ],
+"AverageAverageCoveredCharges": [ 26.887 ],
+"AverageAverageTotalPayments": [ 503.28 ],
+"AverageAverageMedicarePayments": [ 9.9469 ],
+"fillKey": [ "(2.01e+04,4.24e+04]" ] 
+},
+"PA": {
+ "State": [ "PA" ],
+"TotalDischarges": [ 314936 ],
+"AverageCoveredCharges": [ 305358 ],
+"AverageTotalPayments": [ 3.9454e+06 ],
+"AverageMedicarePayments": [ 67139 ],
+"AverageTotalDischarges": [   40.4 ],
+"AverageAverageCoveredCharges": [ 39.128 ],
+"AverageAverageTotalPayments": [ 505.56 ],
+"AverageAverageMedicarePayments": [ 8.6032 ],
+"fillKey": [ "(2.6e+05,8.75e+05]" ] 
+},
+"RI": {
+ "State": [ "RI" ],
+"TotalDischarges": [ 22289 ],
+"AverageCoveredCharges": [ 17314 ],
+"AverageTotalPayments": [ 2.9231e+05 ],
+"AverageMedicarePayments": [ 5880 ],
+"AverageTotalDischarges": [   37.9 ],
+"AverageAverageCoveredCharges": [ 29.446 ],
+"AverageAverageTotalPayments": [ 497.12 ],
+"AverageAverageMedicarePayments": [     10 ],
+"fillKey": [ "(1.39e+04,2.01e+04]" ] 
+},
+"SC": {
+ "State": [ "SC" ],
+"TotalDischarges": [ 121393 ],
+"AverageCoveredCharges": [ 100693 ],
+"AverageTotalPayments": [ 1.4075e+06 ],
+"AverageMedicarePayments": [ 24573 ],
+"AverageTotalDischarges": [   42.6 ],
+"AverageAverageCoveredCharges": [ 35.368 ],
+"AverageAverageTotalPayments": [ 494.39 ],
+"AverageAverageMedicarePayments": [ 8.6312 ],
+"fillKey": [ "(9.59e+04,1.22e+05]" ] 
+},
+"SD": {
+ "State": [ "SD" ],
+"TotalDischarges": [ 20109 ],
+"AverageCoveredCharges": [ 14159 ],
+"AverageTotalPayments": [ 2.3146e+05 ],
+"AverageMedicarePayments": [ 4674 ],
+"AverageTotalDischarges": [   41.4 ],
+"AverageAverageCoveredCharges": [ 29.134 ],
+"AverageAverageTotalPayments": [ 476.25 ],
+"AverageAverageMedicarePayments": [ 9.6173 ],
+"fillKey": [ "(1.39e+04,2.01e+04]" ] 
+},
+"TN": {
+ "State": [ "TN" ],
+"TotalDischarges": [ 189065 ],
+"AverageCoveredCharges": [ 119941 ],
+"AverageTotalPayments": [ 2.0978e+06 ],
+"AverageMedicarePayments": [ 31901 ],
+"AverageTotalDischarges": [   45.4 ],
+"AverageAverageCoveredCharges": [ 28.777 ],
+"AverageAverageTotalPayments": [  503.3 ],
+"AverageAverageMedicarePayments": [ 7.6538 ],
+"fillKey": [ "(9.59e+04,1.22e+05]" ] 
+},
+"TX": {
+ "State": [ "TX" ],
+"TotalDischarges": [ 479939 ],
+"AverageCoveredCharges": [ 486165 ],
+"AverageTotalPayments": [ 5.956e+06 ],
+"AverageMedicarePayments": [ 103728 ],
+"AverageTotalDischarges": [   40.5 ],
+"AverageAverageCoveredCharges": [ 40.978 ],
+"AverageAverageTotalPayments": [ 502.02 ],
+"AverageAverageMedicarePayments": [ 8.7431 ],
+"fillKey": [ "(2.6e+05,8.75e+05]" ] 
+},
+"UT": {
+ "State": [ "UT" ],
+"TotalDischarges": [ 23052 ],
+"AverageCoveredCharges": [ 18011 ],
+"AverageTotalPayments": [ 3.5693e+05 ],
+"AverageMedicarePayments": [ 6784 ],
+"AverageTotalDischarges": [   31.5 ],
+"AverageAverageCoveredCharges": [ 24.605 ],
+"AverageAverageTotalPayments": [ 487.62 ],
+"AverageAverageMedicarePayments": [ 9.2678 ],
+"fillKey": [ "(1.39e+04,2.01e+04]" ] 
+},
+"VA": {
+ "State": [ "VA" ],
+"TotalDischarges": [ 193399 ],
+"AverageCoveredCharges": [ 124407 ],
+"AverageTotalPayments": [ 2.1827e+06 ],
+"AverageMedicarePayments": [ 36355 ],
+"AverageTotalDischarges": [   44.6 ],
+"AverageAverageCoveredCharges": [ 28.718 ],
+"AverageAverageTotalPayments": [ 503.86 ],
+"AverageAverageMedicarePayments": [ 8.3922 ],
+"fillKey": [ "(1.22e+05,2.6e+05]" ] 
+},
+"VT": {
+ "State": [ "VT" ],
+"TotalDischarges": [ 10071 ],
+"AverageCoveredCharges": [ 5287 ],
+"AverageTotalPayments": [ 1.3324e+05 ],
+"AverageMedicarePayments": [ 3035 ],
+"AverageTotalDischarges": [   37.3 ],
+"AverageAverageCoveredCharges": [ 19.581 ],
+"AverageAverageTotalPayments": [ 493.48 ],
+"AverageAverageMedicarePayments": [ 11.241 ],
+"fillKey": [ null ] 
+},
+"WA": {
+ "State": [ "WA" ],
+"TotalDischarges": [ 107011 ],
+"AverageCoveredCharges": [ 95044 ],
+"AverageTotalPayments": [ 1.3921e+06 ],
+"AverageMedicarePayments": [ 27897 ],
+"AverageTotalDischarges": [   38.5 ],
+"AverageAverageCoveredCharges": [ 34.213 ],
+"AverageAverageTotalPayments": [ 501.13 ],
+"AverageAverageMedicarePayments": [ 10.042 ],
+"fillKey": [ "(7.27e+04,9.59e+04]" ] 
+},
+"WI": {
+ "State": [ "WI" ],
+"TotalDischarges": [ 100068 ],
+"AverageCoveredCharges": [ 72685 ],
+"AverageTotalPayments": [ 1.4222e+06 ],
+"AverageMedicarePayments": [ 24849 ],
+"AverageTotalDischarges": [   35.3 ],
+"AverageAverageCoveredCharges": [ 25.647 ],
+"AverageAverageTotalPayments": [ 501.83 ],
+"AverageAverageMedicarePayments": [ 8.7682 ],
+"fillKey": [ "(4.24e+04,7.27e+04]" ] 
+},
+"WV": {
+ "State": [ "WV" ],
+"TotalDischarges": [ 64968 ],
+"AverageCoveredCharges": [ 29704 ],
+"AverageTotalPayments": [ 7.9131e+05 ],
+"AverageMedicarePayments": [ 11866 ],
+"AverageTotalDischarges": [   40.9 ],
+"AverageAverageCoveredCharges": [ 18.694 ],
+"AverageAverageTotalPayments": [ 497.99 ],
+"AverageAverageMedicarePayments": [ 7.4676 ],
+"fillKey": [ "(2.01e+04,4.24e+04]" ] 
+},
+"WY": {
+ "State": [ "WY" ],
+"TotalDischarges": [ 6535 ],
+"AverageCoveredCharges": [ 6965 ],
+"AverageTotalPayments": [ 1.2405e+05 ],
+"AverageMedicarePayments": [ 2688 ],
+"AverageTotalDischarges": [   26.5 ],
+"AverageAverageCoveredCharges": [ 28.198 ],
+"AverageAverageTotalPayments": [ 502.22 ],
+"AverageAverageMedicarePayments": [ 10.883 ],
+"fillKey": [ "(5.29e+03,1.39e+04]" ] 
+} 
+},
+"id": "chart2db4cac1a89" 
+}
+  chartParams.element = document.getElementById('chart2db4cac1a89')
+  
+  
+  var mapchart2db4cac1a89 = new Datamap(chartParams);
+  
+  
+    
+  // draw a bubble map if specified
+  if (chartParams.bubbles) {
+    var bubbles = chartParams.bubbles
+    mapchart2db4cac1a89.bubbles(bubbles)
+  }
+  
+  if (chartParams.labels){
+    mapchart2db4cac1a89.labels()
+  }
+  
+  if (chartParams.legend){
+    mapchart2db4cac1a89.legend()
+  }
+  
+  setProjection = function( element, options ) {
+    var projection, path;
+ 
+      projection = d3.geo.albersUsa()
+        .scale(element.offsetWidth)
+        .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+ 
+    path = d3.geo.path()
+      .projection( projection );
+ 
+    return {path: path, projection: projection};
+  }
+</script>
+
+<style>
+.datamaps {
+  position: relative;
+}
+</style>
+    
+
+		
+		
+		
+		
+		</td></tr></table><br><table><th>Average Medicare Payments</th><th> Average Total Payments </th>
+		
+		
+		
+		<tr>
+		<td style="background:#F6F4F0;padding-top:25px" valign="top" width="700px" align="left">
+		  <div id = 'chart2db43d337520' class = 'rChart datamaps'></div>    
+    <script id='popup-template' type='text/x-handlebars-template'>
+    
+</script>
+<script>
+  var chartParams = {
+ "dom": "chart2db43d337520",
+"width":    600,
+"height":    400,
+"scope": "usa",
+"fills": {
+ "(2.69e+03,4.57e+03]": "#E41A1C",
+"(4.57e+03,6.84e+03]": "#377EB8",
+"(6.84e+03,1.18e+04]": "#4DAF4A",
+"(1.18e+04,1.74e+04]": "#984EA3",
+"(1.74e+04,2.47e+04]": "#FF7F00",
+"(2.47e+04,2.92e+04]": "#FFFF33",
+"(2.92e+04,4e+04]": "#A65628",
+"(4e+04,6.22e+04]": "#F781BF",
+"(6.22e+04,1.58e+05]": "#999999" 
+},
+"legend": true,
+"labels": true,
+"geographyConfig": {
+ "popupTemplate": function(geo, data) {
+                                         return '<div class=\"hoverinfo\">'+'State-'+'<strong>'+
+                                         data.State+'</strong>'+
+                                         '<br>'+'AverageMedicarePayments-' +'<strong>'+
+                                         data.AverageMedicarePayments+'</strong>'+'<br>'+
+                                         'AverageAverageMedicarePayments' +'<strong>'+ data.AverageAverageMedicarePayments+
+                                         '</strong></div>';} 
+},
+"data": {
+ "AK": {
+ "State": [ "AK" ],
+"TotalDischarges": [ 6142 ],
+"AverageCoveredCharges": [ 9208 ],
+"AverageTotalPayments": [ 1.1256e+05 ],
+"AverageMedicarePayments": [ 3253 ],
+"AverageTotalDischarges": [   26.6 ],
+"AverageAverageCoveredCharges": [ 39.861 ],
+"AverageAverageTotalPayments": [ 487.27 ],
+"AverageAverageMedicarePayments": [ 14.082 ],
+"fillKey": [ "(2.69e+03,4.57e+03]" ] 
+},
+"AL": {
+ "State": [ "AL" ],
+"TotalDischarges": [ 142704 ],
+"AverageCoveredCharges": [ 112022 ],
+"AverageTotalPayments": [ 1.8133e+06 ],
+"AverageMedicarePayments": [ 25722 ],
+"AverageTotalDischarges": [   39.3 ],
+"AverageAverageCoveredCharges": [ 30.818 ],
+"AverageAverageTotalPayments": [ 498.86 ],
+"AverageAverageMedicarePayments": [ 7.0762 ],
+"fillKey": [ "(2.47e+04,2.92e+04]" ] 
+},
+"AR": {
+ "State": [ "AR" ],
+"TotalDischarges": [ 86769 ],
+"AverageCoveredCharges": [ 53073 ],
+"AverageTotalPayments": [ 1.0297e+06 ],
+"AverageMedicarePayments": [ 15550 ],
+"AverageTotalDischarges": [     42 ],
+"AverageAverageCoveredCharges": [ 25.676 ],
+"AverageAverageTotalPayments": [ 498.18 ],
+"AverageAverageMedicarePayments": [  7.523 ],
+"fillKey": [ "(1.18e+04,1.74e+04]" ] 
+},
+"AZ": {
+ "State": [ "AZ" ],
+"TotalDischarges": [ 104604 ],
+"AverageCoveredCharges": [ 116014 ],
+"AverageTotalPayments": [ 1.4474e+06 ],
+"AverageMedicarePayments": [ 27509 ],
+"AverageTotalDischarges": [   36.7 ],
+"AverageAverageCoveredCharges": [ 40.692 ],
+"AverageAverageTotalPayments": [ 507.67 ],
+"AverageAverageMedicarePayments": [ 9.6489 ],
+"fillKey": [ "(2.47e+04,2.92e+04]" ] 
+},
+"CA": {
+ "State": [ "CA" ],
+"TotalDischarges": [ 474979 ],
+"AverageCoveredCharges": [ 875420 ],
+"AverageTotalPayments": [ 6.5126e+06 ],
+"AverageMedicarePayments": [ 158453 ],
+"AverageTotalDischarges": [   36.4 ],
+"AverageAverageCoveredCharges": [  67.01 ],
+"AverageAverageTotalPayments": [ 498.51 ],
+"AverageAverageMedicarePayments": [ 12.129 ],
+"fillKey": [ "(6.22e+04,1.58e+05]" ] 
+},
+"CO": {
+ "State": [ "CO" ],
+"TotalDischarges": [ 61320 ],
+"AverageCoveredCharges": [ 76719 ],
+"AverageTotalPayments": [ 9.5081e+05 ],
+"AverageMedicarePayments": [ 17027 ],
+"AverageTotalDischarges": [   32.4 ],
+"AverageAverageCoveredCharges": [ 40.592 ],
+"AverageAverageTotalPayments": [ 503.07 ],
+"AverageAverageMedicarePayments": [  9.009 ],
+"fillKey": [ "(1.18e+04,1.74e+04]" ] 
+},
+"CT": {
+ "State": [ "CT" ],
+"TotalDischarges": [ 96258 ],
+"AverageCoveredCharges": [ 61972 ],
+"AverageTotalPayments": [ 1.0093e+06 ],
+"AverageMedicarePayments": [ 21866 ],
+"AverageTotalDischarges": [   47.9 ],
+"AverageAverageCoveredCharges": [ 30.817 ],
+"AverageAverageTotalPayments": [  501.9 ],
+"AverageAverageMedicarePayments": [ 10.873 ],
+"fillKey": [ "(1.74e+04,2.47e+04]" ] 
+},
+"DC": {
+ "State": [ "DC" ],
+"TotalDischarges": [ 20307 ],
+"AverageCoveredCharges": [ 18307 ],
+"AverageTotalPayments": [ 2.269e+05 ],
+"AverageMedicarePayments": [ 5779 ],
+"AverageTotalDischarges": [     44 ],
+"AverageAverageCoveredCharges": [ 39.626 ],
+"AverageAverageTotalPayments": [ 491.12 ],
+"AverageAverageMedicarePayments": [ 12.509 ],
+"fillKey": [ "(4.57e+03,6.84e+03]" ] 
+},
+"DE": {
+ "State": [ "DE" ],
+"TotalDischarges": [ 26753 ],
+"AverageCoveredCharges": [ 10473 ],
+"AverageTotalPayments": [ 1.9325e+05 ],
+"AverageMedicarePayments": [ 3890 ],
+"AverageTotalDischarges": [   67.9 ],
+"AverageAverageCoveredCharges": [ 26.581 ],
+"AverageAverageTotalPayments": [ 490.48 ],
+"AverageAverageMedicarePayments": [ 9.8731 ],
+"fillKey": [ "(2.69e+03,4.57e+03]" ] 
+},
+"FL": {
+ "State": [ "FL" ],
+"TotalDischarges": [ 536859 ],
+"AverageCoveredCharges": [ 507716 ],
+"AverageTotalPayments": [ 5.5951e+06 ],
+"AverageMedicarePayments": [ 92809 ],
+"AverageTotalDischarges": [   48.1 ],
+"AverageAverageCoveredCharges": [ 45.515 ],
+"AverageAverageTotalPayments": [ 501.58 ],
+"AverageAverageMedicarePayments": [ 8.3199 ],
+"fillKey": [ "(6.22e+04,1.58e+05]" ] 
+},
+"GA": {
+ "State": [ "GA" ],
+"TotalDischarges": [ 191242 ],
+"AverageCoveredCharges": [ 152030 ],
+"AverageTotalPayments": [ 2.4596e+06 ],
+"AverageMedicarePayments": [ 41889 ],
+"AverageTotalDischarges": [   38.5 ],
+"AverageAverageCoveredCharges": [ 30.602 ],
+"AverageAverageTotalPayments": [ 495.08 ],
+"AverageAverageMedicarePayments": [ 8.4318 ],
+"fillKey": [ "(4e+04,6.22e+04]" ] 
+},
+"HI": {
+ "State": [ "HI" ],
+"TotalDischarges": [ 11712 ],
+"AverageCoveredCharges": [ 14006 ],
+"AverageTotalPayments": [ 2.1524e+05 ],
+"AverageMedicarePayments": [ 5431 ],
+"AverageTotalDischarges": [   26.5 ],
+"AverageAverageCoveredCharges": [ 31.688 ],
+"AverageAverageTotalPayments": [ 486.97 ],
+"AverageAverageMedicarePayments": [ 12.287 ],
+"fillKey": [ "(4.57e+03,6.84e+03]" ] 
+},
+"IA": {
+ "State": [ "IA" ],
+"TotalDischarges": [ 68784 ],
+"AverageCoveredCharges": [ 41045 ],
+"AverageTotalPayments": [ 8.636e+05 ],
+"AverageMedicarePayments": [ 13568 ],
+"AverageTotalDischarges": [   39.7 ],
+"AverageAverageCoveredCharges": [ 23.671 ],
+"AverageAverageTotalPayments": [ 498.04 ],
+"AverageAverageMedicarePayments": [ 7.8247 ],
+"fillKey": [ "(1.18e+04,1.74e+04]" ] 
+},
+"ID": {
+ "State": [ "ID" ],
+"TotalDischarges": [ 18295 ],
+"AverageCoveredCharges": [ 13808 ],
+"AverageTotalPayments": [ 2.7862e+05 ],
+"AverageMedicarePayments": [ 5154 ],
+"AverageTotalDischarges": [   33.2 ],
+"AverageAverageCoveredCharges": [  25.06 ],
+"AverageAverageTotalPayments": [ 505.66 ],
+"AverageAverageMedicarePayments": [ 9.3539 ],
+"fillKey": [ "(4.57e+03,6.84e+03]" ] 
+},
+"IL": {
+ "State": [ "IL" ],
+"TotalDischarges": [ 361603 ],
+"AverageCoveredCharges": [ 281283 ],
+"AverageTotalPayments": [ 3.9302e+06 ],
+"AverageMedicarePayments": [ 73452 ],
+"AverageTotalDischarges": [   45.7 ],
+"AverageAverageCoveredCharges": [ 35.565 ],
+"AverageAverageTotalPayments": [ 496.92 ],
+"AverageAverageMedicarePayments": [ 9.2871 ],
+"fillKey": [ "(6.22e+04,1.58e+05]" ] 
+},
+"IN": {
+ "State": [ "IN" ],
+"TotalDischarges": [ 182573 ],
+"AverageCoveredCharges": [ 117776 ],
+"AverageTotalPayments": [ 2.1205e+06 ],
+"AverageMedicarePayments": [ 35140 ],
+"AverageTotalDischarges": [   42.9 ],
+"AverageAverageCoveredCharges": [ 27.647 ],
+"AverageAverageTotalPayments": [ 497.76 ],
+"AverageAverageMedicarePayments": [ 8.2488 ],
+"fillKey": [ "(2.92e+04,4e+04]" ] 
+},
+"KS": {
+ "State": [ "KS" ],
+"TotalDischarges": [ 61800 ],
+"AverageCoveredCharges": [ 50906 ],
+"AverageTotalPayments": [ 8.2246e+05 ],
+"AverageMedicarePayments": [ 13038 ],
+"AverageTotalDischarges": [   37.7 ],
+"AverageAverageCoveredCharges": [ 31.078 ],
+"AverageAverageTotalPayments": [ 502.11 ],
+"AverageAverageMedicarePayments": [ 7.9597 ],
+"fillKey": [ "(1.18e+04,1.74e+04]" ] 
+},
+"KY": {
+ "State": [ "KY" ],
+"TotalDischarges": [ 152572 ],
+"AverageCoveredCharges": [ 77584 ],
+"AverageTotalPayments": [ 1.6034e+06 ],
+"AverageMedicarePayments": [ 25110 ],
+"AverageTotalDischarges": [   47.3 ],
+"AverageAverageCoveredCharges": [ 24.027 ],
+"AverageAverageTotalPayments": [ 496.55 ],
+"AverageAverageMedicarePayments": [ 7.7764 ],
+"fillKey": [ "(2.47e+04,2.92e+04]" ] 
+},
+"LA": {
+ "State": [ "LA" ],
+"TotalDischarges": [ 109876 ],
+"AverageCoveredCharges": [ 98636 ],
+"AverageTotalPayments": [ 1.5134e+06 ],
+"AverageMedicarePayments": [ 24675 ],
+"AverageTotalDischarges": [   36.3 ],
+"AverageAverageCoveredCharges": [ 32.585 ],
+"AverageAverageTotalPayments": [ 499.97 ],
+"AverageAverageMedicarePayments": [ 8.1516 ],
+"fillKey": [ "(2.47e+04,2.92e+04]" ] 
+},
+"MA": {
+ "State": [ "MA" ],
+"TotalDischarges": [ 193680 ],
+"AverageCoveredCharges": [ 76974 ],
+"AverageTotalPayments": [ 1.9177e+06 ],
+"AverageMedicarePayments": [ 37602 ],
+"AverageTotalDischarges": [   50.4 ],
+"AverageAverageCoveredCharges": [ 20.035 ],
+"AverageAverageTotalPayments": [ 499.13 ],
+"AverageAverageMedicarePayments": [ 9.7871 ],
+"fillKey": [ "(2.92e+04,4e+04]" ] 
+},
+"MD": {
+ "State": [ "MD" ],
+"TotalDischarges": [ 173011 ],
+"AverageCoveredCharges": [ 42861 ],
+"AverageTotalPayments": [ 1.6871e+06 ],
+"AverageMedicarePayments": [ 40309 ],
+"AverageTotalDischarges": [     52 ],
+"AverageAverageCoveredCharges": [ 12.871 ],
+"AverageAverageTotalPayments": [ 506.63 ],
+"AverageAverageMedicarePayments": [ 12.105 ],
+"fillKey": [ "(4e+04,6.22e+04]" ] 
+},
+"ME": {
+ "State": [ "ME" ],
+"TotalDischarges": [ 33114 ],
+"AverageCoveredCharges": [ 17667 ],
+"AverageTotalPayments": [ 4.4372e+05 ],
+"AverageMedicarePayments": [ 7270 ],
+"AverageTotalDischarges": [   37.3 ],
+"AverageAverageCoveredCharges": [ 19.895 ],
+"AverageAverageTotalPayments": [ 499.69 ],
+"AverageAverageMedicarePayments": [ 8.1869 ],
+"fillKey": [ "(6.84e+03,1.18e+04]" ] 
+},
+"MI": {
+ "State": [ "MI" ],
+"TotalDischarges": [ 295552 ],
+"AverageCoveredCharges": [ 128000 ],
+"AverageTotalPayments": [ 2.7293e+06 ],
+"AverageMedicarePayments": [ 50143 ],
+"AverageTotalDischarges": [   54.5 ],
+"AverageAverageCoveredCharges": [ 23.621 ],
+"AverageAverageTotalPayments": [ 503.65 ],
+"AverageAverageMedicarePayments": [ 9.2532 ],
+"fillKey": [ "(4e+04,6.22e+04]" ] 
+},
+"MN": {
+ "State": [ "MN" ],
+"TotalDischarges": [ 95666 ],
+"AverageCoveredCharges": [ 61697 ],
+"AverageTotalPayments": [ 1.1211e+06 ],
+"AverageMedicarePayments": [ 21294 ],
+"AverageTotalDischarges": [   42.5 ],
+"AverageAverageCoveredCharges": [ 27.397 ],
+"AverageAverageTotalPayments": [ 497.83 ],
+"AverageAverageMedicarePayments": [ 9.4556 ],
+"fillKey": [ "(1.74e+04,2.47e+04]" ] 
+},
+"MO": {
+ "State": [ "MO" ],
+"TotalDischarges": [ 178826 ],
+"AverageCoveredCharges": [ 124535 ],
+"AverageTotalPayments": [ 2.0434e+06 ],
+"AverageMedicarePayments": [ 33395 ],
+"AverageTotalDischarges": [   44.1 ],
+"AverageAverageCoveredCharges": [ 30.681 ],
+"AverageAverageTotalPayments": [ 503.42 ],
+"AverageAverageMedicarePayments": [ 8.2274 ],
+"fillKey": [ "(2.92e+04,4e+04]" ] 
+},
+"MS": {
+ "State": [ "MS" ],
+"TotalDischarges": [ 93223 ],
+"AverageCoveredCharges": [ 71811 ],
+"AverageTotalPayments": [ 1.1946e+06 ],
+"AverageMedicarePayments": [ 18652 ],
+"AverageTotalDischarges": [   38.7 ],
+"AverageAverageCoveredCharges": [ 29.797 ],
+"AverageAverageTotalPayments": [ 495.69 ],
+"AverageAverageMedicarePayments": [ 7.7394 ],
+"fillKey": [ "(1.74e+04,2.47e+04]" ] 
+},
+"MT": {
+ "State": [ "MT" ],
+"TotalDischarges": [ 15705 ],
+"AverageCoveredCharges": [ 11213 ],
+"AverageTotalPayments": [ 2.5803e+05 ],
+"AverageMedicarePayments": [ 4431 ],
+"AverageTotalDischarges": [     31 ],
+"AverageAverageCoveredCharges": [  22.16 ],
+"AverageAverageTotalPayments": [ 509.94 ],
+"AverageAverageMedicarePayments": [ 8.7569 ],
+"fillKey": [ "(2.69e+03,4.57e+03]" ] 
+},
+"NC": {
+ "State": [ "NC" ],
+"TotalDischarges": [ 257312 ],
+"AverageCoveredCharges": [ 124190 ],
+"AverageTotalPayments": [ 2.5455e+06 ],
+"AverageMedicarePayments": [ 43294 ],
+"AverageTotalDischarges": [     51 ],
+"AverageAverageCoveredCharges": [ 24.636 ],
+"AverageAverageTotalPayments": [ 504.97 ],
+"AverageAverageMedicarePayments": [ 8.5884 ],
+"fillKey": [ "(4e+04,6.22e+04]" ] 
+},
+"ND": {
+ "State": [ "ND" ],
+"TotalDischarges": [ 16425 ],
+"AverageCoveredCharges": [ 8913 ],
+"AverageTotalPayments": [ 2.1776e+05 ],
+"AverageMedicarePayments": [ 3939 ],
+"AverageTotalDischarges": [   38.9 ],
+"AverageAverageCoveredCharges": [ 21.121 ],
+"AverageAverageTotalPayments": [ 516.03 ],
+"AverageAverageMedicarePayments": [ 9.3341 ],
+"fillKey": [ "(2.69e+03,4.57e+03]" ] 
+},
+"NE": {
+ "State": [ "NE" ],
+"TotalDischarges": [ 39799 ],
+"AverageCoveredCharges": [ 33148 ],
+"AverageTotalPayments": [ 5.5609e+05 ],
+"AverageMedicarePayments": [ 9379 ],
+"AverageTotalDischarges": [   37.5 ],
+"AverageAverageCoveredCharges": [ 31.213 ],
+"AverageAverageTotalPayments": [ 523.62 ],
+"AverageAverageMedicarePayments": [ 8.8315 ],
+"fillKey": [ "(6.84e+03,1.18e+04]" ] 
+},
+"NH": {
+ "State": [ "NH" ],
+"TotalDischarges": [ 28419 ],
+"AverageCoveredCharges": [ 21859 ],
+"AverageTotalPayments": [ 4.1057e+05 ],
+"AverageMedicarePayments": [ 7260 ],
+"AverageTotalDischarges": [   34.5 ],
+"AverageAverageCoveredCharges": [  26.56 ],
+"AverageAverageTotalPayments": [ 498.87 ],
+"AverageAverageMedicarePayments": [ 8.8214 ],
+"fillKey": [ "(6.84e+03,1.18e+04]" ] 
+},
+"NJ": {
+ "State": [ "NJ" ],
+"TotalDischarges": [ 251207 ],
+"AverageCoveredCharges": [ 316696 ],
+"AverageTotalPayments": [ 2.4266e+06 ],
+"AverageMedicarePayments": [ 49116 ],
+"AverageTotalDischarges": [   52.1 ],
+"AverageAverageCoveredCharges": [ 65.623 ],
+"AverageAverageTotalPayments": [ 502.81 ],
+"AverageAverageMedicarePayments": [ 10.177 ],
+"fillKey": [ "(4e+04,6.22e+04]" ] 
+},
+"NM": {
+ "State": [ "NM" ],
+"TotalDischarges": [ 26925 ],
+"AverageCoveredCharges": [ 27054 ],
+"AverageTotalPayments": [ 4.6646e+05 ],
+"AverageMedicarePayments": [ 8360 ],
+"AverageTotalDischarges": [   29.4 ],
+"AverageAverageCoveredCharges": [ 29.503 ],
+"AverageAverageTotalPayments": [ 508.68 ],
+"AverageAverageMedicarePayments": [ 9.1167 ],
+"fillKey": [ "(6.84e+03,1.18e+04]" ] 
+},
+"NV": {
+ "State": [ "NV" ],
+"TotalDischarges": [ 42600 ],
+"AverageCoveredCharges": [ 72769 ],
+"AverageTotalPayments": [ 6.0963e+05 ],
+"AverageMedicarePayments": [ 11761 ],
+"AverageTotalDischarges": [   35.4 ],
+"AverageAverageCoveredCharges": [  60.54 ],
+"AverageAverageTotalPayments": [ 507.18 ],
+"AverageAverageMedicarePayments": [ 9.7845 ],
+"fillKey": [ "(6.84e+03,1.18e+04]" ] 
+},
+"NY": {
+ "State": [ "NY" ],
+"TotalDischarges": [ 435557 ],
+"AverageCoveredCharges": [ 283926 ],
+"AverageTotalPayments": [ 4.5907e+06 ],
+"AverageMedicarePayments": [ 103704 ],
+"AverageTotalDischarges": [   47.5 ],
+"AverageAverageCoveredCharges": [ 30.935 ],
+"AverageAverageTotalPayments": [ 600.19 ],
+"AverageAverageMedicarePayments": [ 11.299 ],
+"fillKey": [ "(6.22e+04,1.58e+05]" ] 
+},
+"OH": {
+ "State": [ "OH" ],
+"TotalDischarges": [ 293472 ],
+"AverageCoveredCharges": [ 195242 ],
+"AverageTotalPayments": [ 3.5077e+06 ],
+"AverageMedicarePayments": [ 58265 ],
+"AverageTotalDischarges": [   41.9 ],
+"AverageAverageCoveredCharges": [ 27.844 ],
+"AverageAverageTotalPayments": [ 600.24 ],
+"AverageAverageMedicarePayments": [ 8.3093 ],
+"fillKey": [ "(4e+04,6.22e+04]" ] 
+},
+"OK": {
+ "State": [ "OK" ],
+"TotalDischarges": [ 97292 ],
+"AverageCoveredCharges": [ 73317 ],
+"AverageTotalPayments": [ 1.2437e+06 ],
+"AverageMedicarePayments": [ 19791 ],
+"AverageTotalDischarges": [   38.6 ],
+"AverageAverageCoveredCharges": [ 29.094 ],
+"AverageAverageTotalPayments": [ 493.53 ],
+"AverageAverageMedicarePayments": [ 7.8536 ],
+"fillKey": [ "(1.74e+04,2.47e+04]" ] 
+},
+"OR": {
+ "State": [ "OR" ],
+"TotalDischarges": [ 39546 ],
+"AverageCoveredCharges": [ 34926 ],
+"AverageTotalPayments": [ 6.5376e+05 ],
+"AverageMedicarePayments": [ 12921 ],
+"AverageTotalDischarges": [   30.4 ],
+"AverageAverageCoveredCharges": [ 26.887 ],
+"AverageAverageTotalPayments": [ 503.28 ],
+"AverageAverageMedicarePayments": [ 9.9469 ],
+"fillKey": [ "(1.18e+04,1.74e+04]" ] 
+},
+"PA": {
+ "State": [ "PA" ],
+"TotalDischarges": [ 314936 ],
+"AverageCoveredCharges": [ 305358 ],
+"AverageTotalPayments": [ 3.9454e+06 ],
+"AverageMedicarePayments": [ 67139 ],
+"AverageTotalDischarges": [   40.4 ],
+"AverageAverageCoveredCharges": [ 39.128 ],
+"AverageAverageTotalPayments": [ 505.56 ],
+"AverageAverageMedicarePayments": [ 8.6032 ],
+"fillKey": [ "(6.22e+04,1.58e+05]" ] 
+},
+"RI": {
+ "State": [ "RI" ],
+"TotalDischarges": [ 22289 ],
+"AverageCoveredCharges": [ 17314 ],
+"AverageTotalPayments": [ 2.9231e+05 ],
+"AverageMedicarePayments": [ 5880 ],
+"AverageTotalDischarges": [   37.9 ],
+"AverageAverageCoveredCharges": [ 29.446 ],
+"AverageAverageTotalPayments": [ 497.12 ],
+"AverageAverageMedicarePayments": [     10 ],
+"fillKey": [ "(4.57e+03,6.84e+03]" ] 
+},
+"SC": {
+ "State": [ "SC" ],
+"TotalDischarges": [ 121393 ],
+"AverageCoveredCharges": [ 100693 ],
+"AverageTotalPayments": [ 1.4075e+06 ],
+"AverageMedicarePayments": [ 24573 ],
+"AverageTotalDischarges": [   42.6 ],
+"AverageAverageCoveredCharges": [ 35.368 ],
+"AverageAverageTotalPayments": [ 494.39 ],
+"AverageAverageMedicarePayments": [ 8.6312 ],
+"fillKey": [ "(1.74e+04,2.47e+04]" ] 
+},
+"SD": {
+ "State": [ "SD" ],
+"TotalDischarges": [ 20109 ],
+"AverageCoveredCharges": [ 14159 ],
+"AverageTotalPayments": [ 2.3146e+05 ],
+"AverageMedicarePayments": [ 4674 ],
+"AverageTotalDischarges": [   41.4 ],
+"AverageAverageCoveredCharges": [ 29.134 ],
+"AverageAverageTotalPayments": [ 476.25 ],
+"AverageAverageMedicarePayments": [ 9.6173 ],
+"fillKey": [ "(4.57e+03,6.84e+03]" ] 
+},
+"TN": {
+ "State": [ "TN" ],
+"TotalDischarges": [ 189065 ],
+"AverageCoveredCharges": [ 119941 ],
+"AverageTotalPayments": [ 2.0978e+06 ],
+"AverageMedicarePayments": [ 31901 ],
+"AverageTotalDischarges": [   45.4 ],
+"AverageAverageCoveredCharges": [ 28.777 ],
+"AverageAverageTotalPayments": [  503.3 ],
+"AverageAverageMedicarePayments": [ 7.6538 ],
+"fillKey": [ "(2.92e+04,4e+04]" ] 
+},
+"TX": {
+ "State": [ "TX" ],
+"TotalDischarges": [ 479939 ],
+"AverageCoveredCharges": [ 486165 ],
+"AverageTotalPayments": [ 5.956e+06 ],
+"AverageMedicarePayments": [ 103728 ],
+"AverageTotalDischarges": [   40.5 ],
+"AverageAverageCoveredCharges": [ 40.978 ],
+"AverageAverageTotalPayments": [ 502.02 ],
+"AverageAverageMedicarePayments": [ 8.7431 ],
+"fillKey": [ "(6.22e+04,1.58e+05]" ] 
+},
+"UT": {
+ "State": [ "UT" ],
+"TotalDischarges": [ 23052 ],
+"AverageCoveredCharges": [ 18011 ],
+"AverageTotalPayments": [ 3.5693e+05 ],
+"AverageMedicarePayments": [ 6784 ],
+"AverageTotalDischarges": [   31.5 ],
+"AverageAverageCoveredCharges": [ 24.605 ],
+"AverageAverageTotalPayments": [ 487.62 ],
+"AverageAverageMedicarePayments": [ 9.2678 ],
+"fillKey": [ "(4.57e+03,6.84e+03]" ] 
+},
+"VA": {
+ "State": [ "VA" ],
+"TotalDischarges": [ 193399 ],
+"AverageCoveredCharges": [ 124407 ],
+"AverageTotalPayments": [ 2.1827e+06 ],
+"AverageMedicarePayments": [ 36355 ],
+"AverageTotalDischarges": [   44.6 ],
+"AverageAverageCoveredCharges": [ 28.718 ],
+"AverageAverageTotalPayments": [ 503.86 ],
+"AverageAverageMedicarePayments": [ 8.3922 ],
+"fillKey": [ "(2.92e+04,4e+04]" ] 
+},
+"VT": {
+ "State": [ "VT" ],
+"TotalDischarges": [ 10071 ],
+"AverageCoveredCharges": [ 5287 ],
+"AverageTotalPayments": [ 1.3324e+05 ],
+"AverageMedicarePayments": [ 3035 ],
+"AverageTotalDischarges": [   37.3 ],
+"AverageAverageCoveredCharges": [ 19.581 ],
+"AverageAverageTotalPayments": [ 493.48 ],
+"AverageAverageMedicarePayments": [ 11.241 ],
+"fillKey": [ "(2.69e+03,4.57e+03]" ] 
+},
+"WA": {
+ "State": [ "WA" ],
+"TotalDischarges": [ 107011 ],
+"AverageCoveredCharges": [ 95044 ],
+"AverageTotalPayments": [ 1.3921e+06 ],
+"AverageMedicarePayments": [ 27897 ],
+"AverageTotalDischarges": [   38.5 ],
+"AverageAverageCoveredCharges": [ 34.213 ],
+"AverageAverageTotalPayments": [ 501.13 ],
+"AverageAverageMedicarePayments": [ 10.042 ],
+"fillKey": [ "(2.47e+04,2.92e+04]" ] 
+},
+"WI": {
+ "State": [ "WI" ],
+"TotalDischarges": [ 100068 ],
+"AverageCoveredCharges": [ 72685 ],
+"AverageTotalPayments": [ 1.4222e+06 ],
+"AverageMedicarePayments": [ 24849 ],
+"AverageTotalDischarges": [   35.3 ],
+"AverageAverageCoveredCharges": [ 25.647 ],
+"AverageAverageTotalPayments": [ 501.83 ],
+"AverageAverageMedicarePayments": [ 8.7682 ],
+"fillKey": [ "(2.47e+04,2.92e+04]" ] 
+},
+"WV": {
+ "State": [ "WV" ],
+"TotalDischarges": [ 64968 ],
+"AverageCoveredCharges": [ 29704 ],
+"AverageTotalPayments": [ 7.9131e+05 ],
+"AverageMedicarePayments": [ 11866 ],
+"AverageTotalDischarges": [   40.9 ],
+"AverageAverageCoveredCharges": [ 18.694 ],
+"AverageAverageTotalPayments": [ 497.99 ],
+"AverageAverageMedicarePayments": [ 7.4676 ],
+"fillKey": [ "(1.18e+04,1.74e+04]" ] 
+},
+"WY": {
+ "State": [ "WY" ],
+"TotalDischarges": [ 6535 ],
+"AverageCoveredCharges": [ 6965 ],
+"AverageTotalPayments": [ 1.2405e+05 ],
+"AverageMedicarePayments": [ 2688 ],
+"AverageTotalDischarges": [   26.5 ],
+"AverageAverageCoveredCharges": [ 28.198 ],
+"AverageAverageTotalPayments": [ 502.22 ],
+"AverageAverageMedicarePayments": [ 10.883 ],
+"fillKey": [ null ] 
+} 
+},
+"id": "chart2db43d337520" 
+}
+  chartParams.element = document.getElementById('chart2db43d337520')
+  
+  
+  var mapchart2db43d337520 = new Datamap(chartParams);
+  
+  
+    
+  // draw a bubble map if specified
+  if (chartParams.bubbles) {
+    var bubbles = chartParams.bubbles
+    mapchart2db43d337520.bubbles(bubbles)
+  }
+  
+  if (chartParams.labels){
+    mapchart2db43d337520.labels()
+  }
+  
+  if (chartParams.legend){
+    mapchart2db43d337520.legend()
+  }
+  
+  setProjection = function( element, options ) {
+    var projection, path;
+ 
+      projection = d3.geo.albersUsa()
+        .scale(element.offsetWidth)
+        .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+ 
+    path = d3.geo.path()
+      .projection( projection );
+ 
+    return {path: path, projection: projection};
+  }
+</script>
+
+<style>
+.datamaps {
+  position: relative;
+}
+</style>
+    
+
+		</td>
+		
+		<td style="background:#F6F4F0;padding-top:25px;" valign="top" width="700px" align="left">
+		  <div id = 'chart2db4e354f6a' class = 'rChart datamaps'></div>    
+    <script id='popup-template' type='text/x-handlebars-template'>
+    
+</script>
+<script>
+  var chartParams = {
+ "dom": "chart2db4e354f6a",
+"width":    800,
+"height":    400,
+"scope": "usa",
+"fills": {
+ "(1.13e+05,2.16e+05]": "#8DD3C7",
+"(2.16e+05,2.65e+05]": "#FFFFB3",
+"(2.65e+05,4.27e+05]": "#BEBADA",
+"(4.27e+05,6.39e+05]": "#FB8072",
+"(6.39e+05,9.36e+05]": "#80B1D3",
+"(9.36e+05,1.19e+06]": "#FDB462",
+"(1.19e+06,1.43e+06]": "#B3DE69",
+"(1.43e+06,1.73e+06]": "#FCCDE5",
+"(1.73e+06,2.11e+06]": "#D9D9D9",
+"(2.11e+06,2.52e+06]": "#BC80BD",
+"(2.52e+06,3.94e+06]": "#CCEBC5",
+"(3.94e+06,6.51e+06]": "#FFED6F" 
+},
+"legend": true,
+"labels": true,
+"geographyConfig": {
+ "popupTemplate": function(geo, data) {
+                                         return '<div class=\"hoverinfo\">'+'State-'+'<strong>'+
+                                         data.State+'</strong>'+
+                                         '<br>'+'AverageTotalPayments-' +'<strong>'+
+                                         data.AverageTotalPayments+'</strong>'+'<br>'+
+                                         'AverageAverageTotalPayments' +'<strong>'+ data.AverageAverageTotalPayments
+                                         '</strong></div>';} 
+},
+"data": {
+ "AK": {
+ "State": [ "AK" ],
+"TotalDischarges": [ 6142 ],
+"AverageCoveredCharges": [ 9208 ],
+"AverageTotalPayments": [ 1.1256e+05 ],
+"AverageMedicarePayments": [ 3253 ],
+"AverageTotalDischarges": [   26.6 ],
+"AverageAverageCoveredCharges": [ 39.861 ],
+"AverageAverageTotalPayments": [ 487.27 ],
+"AverageAverageMedicarePayments": [ 14.082 ],
+"fillKey": [ null ] 
+},
+"AL": {
+ "State": [ "AL" ],
+"TotalDischarges": [ 142704 ],
+"AverageCoveredCharges": [ 112022 ],
+"AverageTotalPayments": [ 1.8133e+06 ],
+"AverageMedicarePayments": [ 25722 ],
+"AverageTotalDischarges": [   39.3 ],
+"AverageAverageCoveredCharges": [ 30.818 ],
+"AverageAverageTotalPayments": [ 498.86 ],
+"AverageAverageMedicarePayments": [ 7.0762 ],
+"fillKey": [ "(1.73e+06,2.11e+06]" ] 
+},
+"AR": {
+ "State": [ "AR" ],
+"TotalDischarges": [ 86769 ],
+"AverageCoveredCharges": [ 53073 ],
+"AverageTotalPayments": [ 1.0297e+06 ],
+"AverageMedicarePayments": [ 15550 ],
+"AverageTotalDischarges": [     42 ],
+"AverageAverageCoveredCharges": [ 25.676 ],
+"AverageAverageTotalPayments": [ 498.18 ],
+"AverageAverageMedicarePayments": [  7.523 ],
+"fillKey": [ "(9.36e+05,1.19e+06]" ] 
+},
+"AZ": {
+ "State": [ "AZ" ],
+"TotalDischarges": [ 104604 ],
+"AverageCoveredCharges": [ 116014 ],
+"AverageTotalPayments": [ 1.4474e+06 ],
+"AverageMedicarePayments": [ 27509 ],
+"AverageTotalDischarges": [   36.7 ],
+"AverageAverageCoveredCharges": [ 40.692 ],
+"AverageAverageTotalPayments": [ 507.67 ],
+"AverageAverageMedicarePayments": [ 9.6489 ],
+"fillKey": [ "(1.43e+06,1.73e+06]" ] 
+},
+"CA": {
+ "State": [ "CA" ],
+"TotalDischarges": [ 474979 ],
+"AverageCoveredCharges": [ 875420 ],
+"AverageTotalPayments": [ 6.5126e+06 ],
+"AverageMedicarePayments": [ 158453 ],
+"AverageTotalDischarges": [   36.4 ],
+"AverageAverageCoveredCharges": [  67.01 ],
+"AverageAverageTotalPayments": [ 498.51 ],
+"AverageAverageMedicarePayments": [ 12.129 ],
+"fillKey": [ "(3.94e+06,6.51e+06]" ] 
+},
+"CO": {
+ "State": [ "CO" ],
+"TotalDischarges": [ 61320 ],
+"AverageCoveredCharges": [ 76719 ],
+"AverageTotalPayments": [ 9.5081e+05 ],
+"AverageMedicarePayments": [ 17027 ],
+"AverageTotalDischarges": [   32.4 ],
+"AverageAverageCoveredCharges": [ 40.592 ],
+"AverageAverageTotalPayments": [ 503.07 ],
+"AverageAverageMedicarePayments": [  9.009 ],
+"fillKey": [ "(9.36e+05,1.19e+06]" ] 
+},
+"CT": {
+ "State": [ "CT" ],
+"TotalDischarges": [ 96258 ],
+"AverageCoveredCharges": [ 61972 ],
+"AverageTotalPayments": [ 1.0093e+06 ],
+"AverageMedicarePayments": [ 21866 ],
+"AverageTotalDischarges": [   47.9 ],
+"AverageAverageCoveredCharges": [ 30.817 ],
+"AverageAverageTotalPayments": [  501.9 ],
+"AverageAverageMedicarePayments": [ 10.873 ],
+"fillKey": [ "(9.36e+05,1.19e+06]" ] 
+},
+"DC": {
+ "State": [ "DC" ],
+"TotalDischarges": [ 20307 ],
+"AverageCoveredCharges": [ 18307 ],
+"AverageTotalPayments": [ 2.269e+05 ],
+"AverageMedicarePayments": [ 5779 ],
+"AverageTotalDischarges": [     44 ],
+"AverageAverageCoveredCharges": [ 39.626 ],
+"AverageAverageTotalPayments": [ 491.12 ],
+"AverageAverageMedicarePayments": [ 12.509 ],
+"fillKey": [ "(2.16e+05,2.65e+05]" ] 
+},
+"DE": {
+ "State": [ "DE" ],
+"TotalDischarges": [ 26753 ],
+"AverageCoveredCharges": [ 10473 ],
+"AverageTotalPayments": [ 1.9325e+05 ],
+"AverageMedicarePayments": [ 3890 ],
+"AverageTotalDischarges": [   67.9 ],
+"AverageAverageCoveredCharges": [ 26.581 ],
+"AverageAverageTotalPayments": [ 490.48 ],
+"AverageAverageMedicarePayments": [ 9.8731 ],
+"fillKey": [ "(1.13e+05,2.16e+05]" ] 
+},
+"FL": {
+ "State": [ "FL" ],
+"TotalDischarges": [ 536859 ],
+"AverageCoveredCharges": [ 507716 ],
+"AverageTotalPayments": [ 5.5951e+06 ],
+"AverageMedicarePayments": [ 92809 ],
+"AverageTotalDischarges": [   48.1 ],
+"AverageAverageCoveredCharges": [ 45.515 ],
+"AverageAverageTotalPayments": [ 501.58 ],
+"AverageAverageMedicarePayments": [ 8.3199 ],
+"fillKey": [ "(3.94e+06,6.51e+06]" ] 
+},
+"GA": {
+ "State": [ "GA" ],
+"TotalDischarges": [ 191242 ],
+"AverageCoveredCharges": [ 152030 ],
+"AverageTotalPayments": [ 2.4596e+06 ],
+"AverageMedicarePayments": [ 41889 ],
+"AverageTotalDischarges": [   38.5 ],
+"AverageAverageCoveredCharges": [ 30.602 ],
+"AverageAverageTotalPayments": [ 495.08 ],
+"AverageAverageMedicarePayments": [ 8.4318 ],
+"fillKey": [ "(2.11e+06,2.52e+06]" ] 
+},
+"HI": {
+ "State": [ "HI" ],
+"TotalDischarges": [ 11712 ],
+"AverageCoveredCharges": [ 14006 ],
+"AverageTotalPayments": [ 2.1524e+05 ],
+"AverageMedicarePayments": [ 5431 ],
+"AverageTotalDischarges": [   26.5 ],
+"AverageAverageCoveredCharges": [ 31.688 ],
+"AverageAverageTotalPayments": [ 486.97 ],
+"AverageAverageMedicarePayments": [ 12.287 ],
+"fillKey": [ "(1.13e+05,2.16e+05]" ] 
+},
+"IA": {
+ "State": [ "IA" ],
+"TotalDischarges": [ 68784 ],
+"AverageCoveredCharges": [ 41045 ],
+"AverageTotalPayments": [ 8.636e+05 ],
+"AverageMedicarePayments": [ 13568 ],
+"AverageTotalDischarges": [   39.7 ],
+"AverageAverageCoveredCharges": [ 23.671 ],
+"AverageAverageTotalPayments": [ 498.04 ],
+"AverageAverageMedicarePayments": [ 7.8247 ],
+"fillKey": [ "(6.39e+05,9.36e+05]" ] 
+},
+"ID": {
+ "State": [ "ID" ],
+"TotalDischarges": [ 18295 ],
+"AverageCoveredCharges": [ 13808 ],
+"AverageTotalPayments": [ 2.7862e+05 ],
+"AverageMedicarePayments": [ 5154 ],
+"AverageTotalDischarges": [   33.2 ],
+"AverageAverageCoveredCharges": [  25.06 ],
+"AverageAverageTotalPayments": [ 505.66 ],
+"AverageAverageMedicarePayments": [ 9.3539 ],
+"fillKey": [ "(2.65e+05,4.27e+05]" ] 
+},
+"IL": {
+ "State": [ "IL" ],
+"TotalDischarges": [ 361603 ],
+"AverageCoveredCharges": [ 281283 ],
+"AverageTotalPayments": [ 3.9302e+06 ],
+"AverageMedicarePayments": [ 73452 ],
+"AverageTotalDischarges": [   45.7 ],
+"AverageAverageCoveredCharges": [ 35.565 ],
+"AverageAverageTotalPayments": [ 496.92 ],
+"AverageAverageMedicarePayments": [ 9.2871 ],
+"fillKey": [ "(2.52e+06,3.94e+06]" ] 
+},
+"IN": {
+ "State": [ "IN" ],
+"TotalDischarges": [ 182573 ],
+"AverageCoveredCharges": [ 117776 ],
+"AverageTotalPayments": [ 2.1205e+06 ],
+"AverageMedicarePayments": [ 35140 ],
+"AverageTotalDischarges": [   42.9 ],
+"AverageAverageCoveredCharges": [ 27.647 ],
+"AverageAverageTotalPayments": [ 497.76 ],
+"AverageAverageMedicarePayments": [ 8.2488 ],
+"fillKey": [ "(2.11e+06,2.52e+06]" ] 
+},
+"KS": {
+ "State": [ "KS" ],
+"TotalDischarges": [ 61800 ],
+"AverageCoveredCharges": [ 50906 ],
+"AverageTotalPayments": [ 8.2246e+05 ],
+"AverageMedicarePayments": [ 13038 ],
+"AverageTotalDischarges": [   37.7 ],
+"AverageAverageCoveredCharges": [ 31.078 ],
+"AverageAverageTotalPayments": [ 502.11 ],
+"AverageAverageMedicarePayments": [ 7.9597 ],
+"fillKey": [ "(6.39e+05,9.36e+05]" ] 
+},
+"KY": {
+ "State": [ "KY" ],
+"TotalDischarges": [ 152572 ],
+"AverageCoveredCharges": [ 77584 ],
+"AverageTotalPayments": [ 1.6034e+06 ],
+"AverageMedicarePayments": [ 25110 ],
+"AverageTotalDischarges": [   47.3 ],
+"AverageAverageCoveredCharges": [ 24.027 ],
+"AverageAverageTotalPayments": [ 496.55 ],
+"AverageAverageMedicarePayments": [ 7.7764 ],
+"fillKey": [ "(1.43e+06,1.73e+06]" ] 
+},
+"LA": {
+ "State": [ "LA" ],
+"TotalDischarges": [ 109876 ],
+"AverageCoveredCharges": [ 98636 ],
+"AverageTotalPayments": [ 1.5134e+06 ],
+"AverageMedicarePayments": [ 24675 ],
+"AverageTotalDischarges": [   36.3 ],
+"AverageAverageCoveredCharges": [ 32.585 ],
+"AverageAverageTotalPayments": [ 499.97 ],
+"AverageAverageMedicarePayments": [ 8.1516 ],
+"fillKey": [ "(1.43e+06,1.73e+06]" ] 
+},
+"MA": {
+ "State": [ "MA" ],
+"TotalDischarges": [ 193680 ],
+"AverageCoveredCharges": [ 76974 ],
+"AverageTotalPayments": [ 1.9177e+06 ],
+"AverageMedicarePayments": [ 37602 ],
+"AverageTotalDischarges": [   50.4 ],
+"AverageAverageCoveredCharges": [ 20.035 ],
+"AverageAverageTotalPayments": [ 499.13 ],
+"AverageAverageMedicarePayments": [ 9.7871 ],
+"fillKey": [ "(1.73e+06,2.11e+06]" ] 
+},
+"MD": {
+ "State": [ "MD" ],
+"TotalDischarges": [ 173011 ],
+"AverageCoveredCharges": [ 42861 ],
+"AverageTotalPayments": [ 1.6871e+06 ],
+"AverageMedicarePayments": [ 40309 ],
+"AverageTotalDischarges": [     52 ],
+"AverageAverageCoveredCharges": [ 12.871 ],
+"AverageAverageTotalPayments": [ 506.63 ],
+"AverageAverageMedicarePayments": [ 12.105 ],
+"fillKey": [ "(1.43e+06,1.73e+06]" ] 
+},
+"ME": {
+ "State": [ "ME" ],
+"TotalDischarges": [ 33114 ],
+"AverageCoveredCharges": [ 17667 ],
+"AverageTotalPayments": [ 4.4372e+05 ],
+"AverageMedicarePayments": [ 7270 ],
+"AverageTotalDischarges": [   37.3 ],
+"AverageAverageCoveredCharges": [ 19.895 ],
+"AverageAverageTotalPayments": [ 499.69 ],
+"AverageAverageMedicarePayments": [ 8.1869 ],
+"fillKey": [ "(4.27e+05,6.39e+05]" ] 
+},
+"MI": {
+ "State": [ "MI" ],
+"TotalDischarges": [ 295552 ],
+"AverageCoveredCharges": [ 128000 ],
+"AverageTotalPayments": [ 2.7293e+06 ],
+"AverageMedicarePayments": [ 50143 ],
+"AverageTotalDischarges": [   54.5 ],
+"AverageAverageCoveredCharges": [ 23.621 ],
+"AverageAverageTotalPayments": [ 503.65 ],
+"AverageAverageMedicarePayments": [ 9.2532 ],
+"fillKey": [ "(2.52e+06,3.94e+06]" ] 
+},
+"MN": {
+ "State": [ "MN" ],
+"TotalDischarges": [ 95666 ],
+"AverageCoveredCharges": [ 61697 ],
+"AverageTotalPayments": [ 1.1211e+06 ],
+"AverageMedicarePayments": [ 21294 ],
+"AverageTotalDischarges": [   42.5 ],
+"AverageAverageCoveredCharges": [ 27.397 ],
+"AverageAverageTotalPayments": [ 497.83 ],
+"AverageAverageMedicarePayments": [ 9.4556 ],
+"fillKey": [ "(9.36e+05,1.19e+06]" ] 
+},
+"MO": {
+ "State": [ "MO" ],
+"TotalDischarges": [ 178826 ],
+"AverageCoveredCharges": [ 124535 ],
+"AverageTotalPayments": [ 2.0434e+06 ],
+"AverageMedicarePayments": [ 33395 ],
+"AverageTotalDischarges": [   44.1 ],
+"AverageAverageCoveredCharges": [ 30.681 ],
+"AverageAverageTotalPayments": [ 503.42 ],
+"AverageAverageMedicarePayments": [ 8.2274 ],
+"fillKey": [ "(1.73e+06,2.11e+06]" ] 
+},
+"MS": {
+ "State": [ "MS" ],
+"TotalDischarges": [ 93223 ],
+"AverageCoveredCharges": [ 71811 ],
+"AverageTotalPayments": [ 1.1946e+06 ],
+"AverageMedicarePayments": [ 18652 ],
+"AverageTotalDischarges": [   38.7 ],
+"AverageAverageCoveredCharges": [ 29.797 ],
+"AverageAverageTotalPayments": [ 495.69 ],
+"AverageAverageMedicarePayments": [ 7.7394 ],
+"fillKey": [ "(9.36e+05,1.19e+06]" ] 
+},
+"MT": {
+ "State": [ "MT" ],
+"TotalDischarges": [ 15705 ],
+"AverageCoveredCharges": [ 11213 ],
+"AverageTotalPayments": [ 2.5803e+05 ],
+"AverageMedicarePayments": [ 4431 ],
+"AverageTotalDischarges": [     31 ],
+"AverageAverageCoveredCharges": [  22.16 ],
+"AverageAverageTotalPayments": [ 509.94 ],
+"AverageAverageMedicarePayments": [ 8.7569 ],
+"fillKey": [ "(2.16e+05,2.65e+05]" ] 
+},
+"NC": {
+ "State": [ "NC" ],
+"TotalDischarges": [ 257312 ],
+"AverageCoveredCharges": [ 124190 ],
+"AverageTotalPayments": [ 2.5455e+06 ],
+"AverageMedicarePayments": [ 43294 ],
+"AverageTotalDischarges": [     51 ],
+"AverageAverageCoveredCharges": [ 24.636 ],
+"AverageAverageTotalPayments": [ 504.97 ],
+"AverageAverageMedicarePayments": [ 8.5884 ],
+"fillKey": [ "(2.52e+06,3.94e+06]" ] 
+},
+"ND": {
+ "State": [ "ND" ],
+"TotalDischarges": [ 16425 ],
+"AverageCoveredCharges": [ 8913 ],
+"AverageTotalPayments": [ 2.1776e+05 ],
+"AverageMedicarePayments": [ 3939 ],
+"AverageTotalDischarges": [   38.9 ],
+"AverageAverageCoveredCharges": [ 21.121 ],
+"AverageAverageTotalPayments": [ 516.03 ],
+"AverageAverageMedicarePayments": [ 9.3341 ],
+"fillKey": [ "(2.16e+05,2.65e+05]" ] 
+},
+"NE": {
+ "State": [ "NE" ],
+"TotalDischarges": [ 39799 ],
+"AverageCoveredCharges": [ 33148 ],
+"AverageTotalPayments": [ 5.5609e+05 ],
+"AverageMedicarePayments": [ 9379 ],
+"AverageTotalDischarges": [   37.5 ],
+"AverageAverageCoveredCharges": [ 31.213 ],
+"AverageAverageTotalPayments": [ 523.62 ],
+"AverageAverageMedicarePayments": [ 8.8315 ],
+"fillKey": [ "(4.27e+05,6.39e+05]" ] 
+},
+"NH": {
+ "State": [ "NH" ],
+"TotalDischarges": [ 28419 ],
+"AverageCoveredCharges": [ 21859 ],
+"AverageTotalPayments": [ 4.1057e+05 ],
+"AverageMedicarePayments": [ 7260 ],
+"AverageTotalDischarges": [   34.5 ],
+"AverageAverageCoveredCharges": [  26.56 ],
+"AverageAverageTotalPayments": [ 498.87 ],
+"AverageAverageMedicarePayments": [ 8.8214 ],
+"fillKey": [ "(2.65e+05,4.27e+05]" ] 
+},
+"NJ": {
+ "State": [ "NJ" ],
+"TotalDischarges": [ 251207 ],
+"AverageCoveredCharges": [ 316696 ],
+"AverageTotalPayments": [ 2.4266e+06 ],
+"AverageMedicarePayments": [ 49116 ],
+"AverageTotalDischarges": [   52.1 ],
+"AverageAverageCoveredCharges": [ 65.623 ],
+"AverageAverageTotalPayments": [ 502.81 ],
+"AverageAverageMedicarePayments": [ 10.177 ],
+"fillKey": [ "(2.11e+06,2.52e+06]" ] 
+},
+"NM": {
+ "State": [ "NM" ],
+"TotalDischarges": [ 26925 ],
+"AverageCoveredCharges": [ 27054 ],
+"AverageTotalPayments": [ 4.6646e+05 ],
+"AverageMedicarePayments": [ 8360 ],
+"AverageTotalDischarges": [   29.4 ],
+"AverageAverageCoveredCharges": [ 29.503 ],
+"AverageAverageTotalPayments": [ 508.68 ],
+"AverageAverageMedicarePayments": [ 9.1167 ],
+"fillKey": [ "(4.27e+05,6.39e+05]" ] 
+},
+"NV": {
+ "State": [ "NV" ],
+"TotalDischarges": [ 42600 ],
+"AverageCoveredCharges": [ 72769 ],
+"AverageTotalPayments": [ 6.0963e+05 ],
+"AverageMedicarePayments": [ 11761 ],
+"AverageTotalDischarges": [   35.4 ],
+"AverageAverageCoveredCharges": [  60.54 ],
+"AverageAverageTotalPayments": [ 507.18 ],
+"AverageAverageMedicarePayments": [ 9.7845 ],
+"fillKey": [ "(4.27e+05,6.39e+05]" ] 
+},
+"NY": {
+ "State": [ "NY" ],
+"TotalDischarges": [ 435557 ],
+"AverageCoveredCharges": [ 283926 ],
+"AverageTotalPayments": [ 4.5907e+06 ],
+"AverageMedicarePayments": [ 103704 ],
+"AverageTotalDischarges": [   47.5 ],
+"AverageAverageCoveredCharges": [ 30.935 ],
+"AverageAverageTotalPayments": [ 500.19 ],
+"AverageAverageMedicarePayments": [ 11.299 ],
+"fillKey": [ "(3.94e+06,6.51e+06]" ] 
+},
+"OH": {
+ "State": [ "OH" ],
+"TotalDischarges": [ 293472 ],
+"AverageCoveredCharges": [ 195242 ],
+"AverageTotalPayments": [ 3.5077e+06 ],
+"AverageMedicarePayments": [ 58265 ],
+"AverageTotalDischarges": [   41.9 ],
+"AverageAverageCoveredCharges": [ 27.844 ],
+"AverageAverageTotalPayments": [ 500.24 ],
+"AverageAverageMedicarePayments": [ 8.3093 ],
+"fillKey": [ "(2.52e+06,3.94e+06]" ] 
+},
+"OK": {
+ "State": [ "OK" ],
+"TotalDischarges": [ 97292 ],
+"AverageCoveredCharges": [ 73317 ],
+"AverageTotalPayments": [ 1.2437e+06 ],
+"AverageMedicarePayments": [ 19791 ],
+"AverageTotalDischarges": [   38.6 ],
+"AverageAverageCoveredCharges": [ 29.094 ],
+"AverageAverageTotalPayments": [ 493.53 ],
+"AverageAverageMedicarePayments": [ 7.8536 ],
+"fillKey": [ "(1.19e+06,1.43e+06]" ] 
+},
+"OR": {
+ "State": [ "OR" ],
+"TotalDischarges": [ 39546 ],
+"AverageCoveredCharges": [ 34926 ],
+"AverageTotalPayments": [ 6.5376e+05 ],
+"AverageMedicarePayments": [ 12921 ],
+"AverageTotalDischarges": [   30.4 ],
+"AverageAverageCoveredCharges": [ 26.887 ],
+"AverageAverageTotalPayments": [ 503.28 ],
+"AverageAverageMedicarePayments": [ 9.9469 ],
+"fillKey": [ "(6.39e+05,9.36e+05]" ] 
+},
+"PA": {
+ "State": [ "PA" ],
+"TotalDischarges": [ 314936 ],
+"AverageCoveredCharges": [ 305358 ],
+"AverageTotalPayments": [ 3.9454e+06 ],
+"AverageMedicarePayments": [ 67139 ],
+"AverageTotalDischarges": [   40.4 ],
+"AverageAverageCoveredCharges": [ 39.128 ],
+"AverageAverageTotalPayments": [ 505.56 ],
+"AverageAverageMedicarePayments": [ 8.6032 ],
+"fillKey": [ "(3.94e+06,6.51e+06]" ] 
+},
+"RI": {
+ "State": [ "RI" ],
+"TotalDischarges": [ 22289 ],
+"AverageCoveredCharges": [ 17314 ],
+"AverageTotalPayments": [ 2.9231e+05 ],
+"AverageMedicarePayments": [ 5880 ],
+"AverageTotalDischarges": [   37.9 ],
+"AverageAverageCoveredCharges": [ 29.446 ],
+"AverageAverageTotalPayments": [ 497.12 ],
+"AverageAverageMedicarePayments": [     10 ],
+"fillKey": [ "(2.65e+05,4.27e+05]" ] 
+},
+"SC": {
+ "State": [ "SC" ],
+"TotalDischarges": [ 121393 ],
+"AverageCoveredCharges": [ 100693 ],
+"AverageTotalPayments": [ 1.4075e+06 ],
+"AverageMedicarePayments": [ 24573 ],
+"AverageTotalDischarges": [   42.6 ],
+"AverageAverageCoveredCharges": [ 35.368 ],
+"AverageAverageTotalPayments": [ 494.39 ],
+"AverageAverageMedicarePayments": [ 8.6312 ],
+"fillKey": [ "(1.19e+06,1.43e+06]" ] 
+},
+"SD": {
+ "State": [ "SD" ],
+"TotalDischarges": [ 20109 ],
+"AverageCoveredCharges": [ 14159 ],
+"AverageTotalPayments": [ 2.3146e+05 ],
+"AverageMedicarePayments": [ 4674 ],
+"AverageTotalDischarges": [   41.4 ],
+"AverageAverageCoveredCharges": [ 29.134 ],
+"AverageAverageTotalPayments": [ 476.25 ],
+"AverageAverageMedicarePayments": [ 9.6173 ],
+"fillKey": [ "(2.16e+05,2.65e+05]" ] 
+},
+"TN": {
+ "State": [ "TN" ],
+"TotalDischarges": [ 189065 ],
+"AverageCoveredCharges": [ 119941 ],
+"AverageTotalPayments": [ 2.0978e+06 ],
+"AverageMedicarePayments": [ 31901 ],
+"AverageTotalDischarges": [   45.4 ],
+"AverageAverageCoveredCharges": [ 28.777 ],
+"AverageAverageTotalPayments": [  503.3 ],
+"AverageAverageMedicarePayments": [ 7.6538 ],
+"fillKey": [ "(1.73e+06,2.11e+06]" ] 
+},
+"TX": {
+ "State": [ "TX" ],
+"TotalDischarges": [ 479939 ],
+"AverageCoveredCharges": [ 486165 ],
+"AverageTotalPayments": [ 5.956e+06 ],
+"AverageMedicarePayments": [ 103728 ],
+"AverageTotalDischarges": [   40.5 ],
+"AverageAverageCoveredCharges": [ 40.978 ],
+"AverageAverageTotalPayments": [ 502.02 ],
+"AverageAverageMedicarePayments": [ 8.7431 ],
+"fillKey": [ "(3.94e+06,6.51e+06]" ] 
+},
+"UT": {
+ "State": [ "UT" ],
+"TotalDischarges": [ 23052 ],
+"AverageCoveredCharges": [ 18011 ],
+"AverageTotalPayments": [ 3.5693e+05 ],
+"AverageMedicarePayments": [ 6784 ],
+"AverageTotalDischarges": [   31.5 ],
+"AverageAverageCoveredCharges": [ 24.605 ],
+"AverageAverageTotalPayments": [ 487.62 ],
+"AverageAverageMedicarePayments": [ 9.2678 ],
+"fillKey": [ "(2.65e+05,4.27e+05]" ] 
+},
+"VA": {
+ "State": [ "VA" ],
+"TotalDischarges": [ 193399 ],
+"AverageCoveredCharges": [ 124407 ],
+"AverageTotalPayments": [ 2.1827e+06 ],
+"AverageMedicarePayments": [ 36355 ],
+"AverageTotalDischarges": [   44.6 ],
+"AverageAverageCoveredCharges": [ 28.718 ],
+"AverageAverageTotalPayments": [ 503.86 ],
+"AverageAverageMedicarePayments": [ 8.3922 ],
+"fillKey": [ "(2.11e+06,2.52e+06]" ] 
+},
+"VT": {
+ "State": [ "VT" ],
+"TotalDischarges": [ 10071 ],
+"AverageCoveredCharges": [ 5287 ],
+"AverageTotalPayments": [ 1.3324e+05 ],
+"AverageMedicarePayments": [ 3035 ],
+"AverageTotalDischarges": [   37.3 ],
+"AverageAverageCoveredCharges": [ 19.581 ],
+"AverageAverageTotalPayments": [ 493.48 ],
+"AverageAverageMedicarePayments": [ 11.241 ],
+"fillKey": [ "(1.13e+05,2.16e+05]" ] 
+},
+"WA": {
+ "State": [ "WA" ],
+"TotalDischarges": [ 107011 ],
+"AverageCoveredCharges": [ 95044 ],
+"AverageTotalPayments": [ 1.3921e+06 ],
+"AverageMedicarePayments": [ 27897 ],
+"AverageTotalDischarges": [   38.5 ],
+"AverageAverageCoveredCharges": [ 34.213 ],
+"AverageAverageTotalPayments": [ 501.13 ],
+"AverageAverageMedicarePayments": [ 10.042 ],
+"fillKey": [ "(1.19e+06,1.43e+06]" ] 
+},
+"WI": {
+ "State": [ "WI" ],
+"TotalDischarges": [ 100068 ],
+"AverageCoveredCharges": [ 72685 ],
+"AverageTotalPayments": [ 1.4222e+06 ],
+"AverageMedicarePayments": [ 24849 ],
+"AverageTotalDischarges": [   35.3 ],
+"AverageAverageCoveredCharges": [ 25.647 ],
+"AverageAverageTotalPayments": [ 501.83 ],
+"AverageAverageMedicarePayments": [ 8.7682 ],
+"fillKey": [ "(1.19e+06,1.43e+06]" ] 
+},
+"WV": {
+ "State": [ "WV" ],
+"TotalDischarges": [ 64968 ],
+"AverageCoveredCharges": [ 29704 ],
+"AverageTotalPayments": [ 7.9131e+05 ],
+"AverageMedicarePayments": [ 11866 ],
+"AverageTotalDischarges": [   40.9 ],
+"AverageAverageCoveredCharges": [ 18.694 ],
+"AverageAverageTotalPayments": [ 497.99 ],
+"AverageAverageMedicarePayments": [ 7.4676 ],
+"fillKey": [ "(6.39e+05,9.36e+05]" ] 
+},
+"WY": {
+ "State": [ "WY" ],
+"TotalDischarges": [ 6535 ],
+"AverageCoveredCharges": [ 6965 ],
+"AverageTotalPayments": [ 1.2405e+05 ],
+"AverageMedicarePayments": [ 2688 ],
+"AverageTotalDischarges": [   26.5 ],
+"AverageAverageCoveredCharges": [ 28.198 ],
+"AverageAverageTotalPayments": [ 502.22 ],
+"AverageAverageMedicarePayments": [ 10.883 ],
+"fillKey": [ "(1.13e+05,2.16e+05]" ] 
+} 
+},
+"id": "chart2db4e354f6a" 
+}
+  chartParams.element = document.getElementById('chart2db4e354f6a')
+  
+  
+  var mapchart2db4e354f6a = new Datamap(chartParams);
+  
+  
+    
+  // draw a bubble map if specified
+  if (chartParams.bubbles) {
+    var bubbles = chartParams.bubbles
+    mapchart2db4e354f6a.bubbles(bubbles)
+  }
+  
+  if (chartParams.labels){
+    mapchart2db4e354f6a.labels()
+  }
+  
+  if (chartParams.legend){
+    mapchart2db4e354f6a.legend()
+  }
+  
+  setProjection = function( element, options ) {
+    var projection, path;
+ 
+      projection = d3.geo.albersUsa()
+        .scale(element.offsetWidth)
+        .translate([element.offsetWidth / 2, element.offsetHeight / 2]);
+ 
+    path = d3.geo.path()
+      .projection( projection );
+ 
+    return {path: path, projection: projection};
+  }
+</script>
+
+<style>
+.datamaps {
+  position: relative;
+}
+</style>
+    
+
+		
+		
+		
+		</td>
+		
+		
+		</tr>
+		</table>
+<br><br>
+      </div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+        <p><a href="index.html">Home</a> | <a href="examples.html">V</a> | <a href="examples1.html">V1</a> | <a href="examples2.html">V2</a> | <a href="examples3.html">V3</a> | <a href="examples4.html">V4</a> | <a href="examples5.html">V5</a> | <a href="examples6.html">V6</a> | <a href="contact.html">References</a></p>
+    </div>
+  </div>
+</body>
+</html>
